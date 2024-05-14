@@ -1,12 +1,12 @@
+import { Home } from "./compoenents/Home"
+import { NavBar } from "./compoenents/NavBar"
 
 function App() {
 
   return (
     <>
-     
-      <p >
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar/>
+      <Home/>
     </>
   )
 }

@@ -1,14 +1,15 @@
-import { Home } from "./compoenents/Home"
-import { NavBar } from "./compoenents/NavBar"
+import Experience from "./components/Experience";
+import Home from "./components/Home";
+import { NavBar } from "./components/NavBar";
 
 function App() {
-
   return (
     <>
-      <NavBar/>
-      <Home/>
+      <NavBar />
+      <Home />
+      <Experience/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

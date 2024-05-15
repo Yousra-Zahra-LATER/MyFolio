@@ -3,6 +3,39 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.blob {
+    background: #e69c9c;
+    border-radius: 50%;
+    right: 9px; /* Utilisation de left au lieu de right */
+    margin-top: -9px;
+    height: 20px;
+    width: 20px;
+    position: relative; /* Assurez-vous d'ajouter position: relative; */
+
+	box-shadow: 0 0 0 0 rgb(80, 14, 87);
+	transform: scale(1);
+	animation: pulse 0.9s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.45);
+		box-shadow: 0 0 0 0 rgba(220, 198, 240, 0.7);
+	}
+
+	70% {
+		transform: scale(0.5);
+		box-shadow: 0 0 0 10px rgba(116, 18, 69, 0);
+	}
+
+	100% {
+		transform: scale(0.45);
+		box-shadow: 0 0 0 0 rgba(225, 149, 149, 0);
+	}
+}
+
+
 @layer base{
    
 }

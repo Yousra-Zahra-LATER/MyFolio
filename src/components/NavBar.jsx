@@ -27,7 +27,7 @@ export const NavBar = () => {
 
   return (
     <div className="w-full h-20 text-white bg-[#291426] flex justify-between items-center fixed">
-      <div className="flex font-signature ml-9 text-5xl ">
+      <div className="flex font-signature ml-9 text-5xl hover:-rotate-6">
         {" "}
         Z
         <motion.div

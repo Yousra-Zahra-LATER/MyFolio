@@ -52,7 +52,7 @@ const About = () => {
     <>
       <div
         id='tech-logos'
-        className='group flex flex-wrap justify-center gap-6 text-4xl sm:gap-8 sm:text-7xl '
+        className='group flex justify-center gap-6 text-4xl sm:gap-8 sm:text-7xl '
       >
         {ICONS.map(({ label, classes, iconName: IconName }) => (
           //iteration de chaque objet de la liste ICONS avec leurs attributs

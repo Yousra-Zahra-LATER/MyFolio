@@ -34,8 +34,37 @@
 		box-shadow: 0 0 0 0 rgba(225, 149, 149, 0);
 	}
 }
+@keyframes spotlight {
+  0%, 100% {
+    background-position: 200% center;
+  }
+  50% {
+    background-position: 0% center;
+  }
+}
+
+.animate-spotlight {
+  background-size: 200% 200%;
+  animation: spotlight 3s ease-in-out infinite;
+}
 
 
 @layer base{
    
+}
+
+@layer components {
+  .hero__heading {
+    @apply text-5xl text-primary  relative sm:text-7xl md:text-7xl dark:text-white;
+  }
+
+  .hero__heading::before {
+    @apply text-xs text-primary-300 font-medium  absolute -top-6 -left-2 sm:text-base dark:text-opacity-80 dark:text-white;
+    content: "I AM";
+  }
+
+  .hero__heading::after {
+    @apply text-xs text-primary-300 font-medium  absolute -bottom-6 -right-10 sm:text-base dark:text-opacity-80 dark:text-white;
+    content: "Software Engineer";
+  }
 }

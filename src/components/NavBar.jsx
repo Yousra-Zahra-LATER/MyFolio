@@ -26,7 +26,7 @@ export const NavBar = () => {
   ];
 
   return (
-    <div className="w-full h-20 text-white bg-[#291426] flex justify-between items-center fixed">
+    <div className="w-full h-20 text-black bg-[#ffffff] flex justify-between items-center fixed z-50">
       <div className="flex font-signature ml-9 text-5xl hover:-rotate-6">
         {" "}
         Z
@@ -60,7 +60,7 @@ export const NavBar = () => {
   transition={{ type: "spring", stiffness: 400, damping: 17 }}
 >
   <motion.button
-    className="hover:bg-[#807279] rounded-md py-2 px-2 font-semibold text-white"
+    className="hover:bg-[#807279] rounded-md py-2 px-2 font-semibold text-black"
     onClick={""}
   >
     Portfolio

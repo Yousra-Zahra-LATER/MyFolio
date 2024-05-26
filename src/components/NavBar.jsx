@@ -26,7 +26,7 @@ export const NavBar = () => {
   ];
 
   return (
-    <div className="w-full h-20 text-black bg-[#ffffff] flex justify-between items-center fixed z-50">
+    <div className="w-full h-20 text-black  flex justify-between items-center fixed z-50">
       <div className="flex font-signature ml-9 text-5xl hover:-rotate-6">
         {" "}
         Z
@@ -35,7 +35,9 @@ export const NavBar = () => {
           animate={{ scale: 1 }} // Animation d'entrée finale
           transition={{ duration: 0.6 }} // Durée de l'animation
         >
+          
           <GiButterflyFlower />
+          
         </motion.div>
       </div>
 

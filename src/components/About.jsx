@@ -1,32 +1,122 @@
 import React from "react";
+import { m, LazyMotion, domAnimation } from "framer-motion";
+import SectionTitle from "../components/SectionTitle";
 const About = () => {
   return (
     <>
-      <div className="h-screen flex justify-center" style={{
-  backgroundImage: "url('/src/assets/22.jpg')",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-}}>
-  <div className="xl:w-[70%] flex flex-col pb-16">
-    <span>Introduction</span>
-    <div className="text-6xl md:h-[30%] content-center">About me</div>
+  <div
+  className="h-screen flex justify-center"
+  style={{
+    backgroundImage: "url('/src/assets/22.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="w-full sm:w-[80%] flex flex-col gap-5 h-full">
     
-    <div className="flex flex-col-reverse sm:flex-row gap-5">
-      <div className="w-full md:w-[50%] md:h-full flex md:flex-col flex-col gap-5">
-   
-        <p className="md:w-[90%] text-center">Hello there, I'm so happy you ar.</p>
-        <p className="md:w-[90%] text-center">I offer comprehensive solutions tailored to your needs.</p>
-        <p className="md:w-[90%] text-center">With a focus on user experience and performance, my applications are both functional and aesthetically pleasing.</p>
-        <p className="md:w-[90%] text-center">Let's build something great together.</p>
+    <div className="w-full md:w-[60%] h-[30%] flex ">
+       <SectionTitle title="ABOUT ME" subtitle="Introduction"/>
+    </div>
+    
+    <div className="flex flex-col-reverse sm:flex-row flex-grow h-[70%]">
+    <LazyMotion features={domAnimation} strict>
+      <div className="w-full flex flex-col gap-6 items-center md:w-[60%]">
+        <m.p
+          className="text-center max-w-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 50,
+          }}
+        >
+          Hello there, I'm so happy you are here.
+        </m.p>
+        <m.p
+          className="text-center max-w-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 50,
+          }}
+        >
+          I offer comprehensive solutions tailored to your needs. With a focus
+          on user experience and performance, my applications are both
+          functional and aesthetically pleasing.
+        </m.p>
+        <m.p
+          className="text-center max-w-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 50,
+          }}
+        >
+          I offer comprehensive solutions tailored to your needs. With a focus
+          on user experience and performance, my applications are both
+          functional and aesthetically pleasing.
+        </m.p>
+        <m.p
+          className="text-center max-w-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 50,
+          }}
+        >
+          I offer comprehensive solutions tailored to your needs. With a focus
+          on user experience and performance, my applications are both
+          functional and aesthetically pleasing.
+        </m.p>
+        <m.p
+          className="text-center max-w-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 50,
+          }}
+        >
+          Let's build something great together.
+        </m.p>
       </div>
-      <div className="w-full md:w-[50%] flex h-full items-center justify-center">
-        <div className="w-[80%] lg:w-[50%] h-[300px] sm:h-[350px] flex justify-center items-center">
-          <img src='/src/assets/222.png' alt="Profile"/>
-        </div>
-      </div>
+    </LazyMotion>
+      <LazyMotion features={domAnimation} strict>
+      <m.div
+        
+        initial={{ x: 200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 0.5,
+          type: "spring",
+          stiffness: 100,
+          damping: 8,
+        }}
+        className=" md:flex-1 flex justify-center items-center  "
+       
+      >
+         <img src="/src/assets/moi.png" alt="Profile" style={{ marginTop: '-220px' }} />
+     
+      </m.div>
+    </LazyMotion> 
+     
     </div>
   </div>
 </div>
+
 
     </>
   );

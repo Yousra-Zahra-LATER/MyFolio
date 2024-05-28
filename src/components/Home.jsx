@@ -35,7 +35,7 @@ const Home = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute flex flex-col md:right-10 md:w-1/2 h-[200px] mt-28 items-center gap-14 md:gap-14">
+        <div className="absolute flex flex-col md:right-10 md:w-1/2 md:gap-14 mt-28 items-center gap-14 ">
           <div className="mt-24">
             <motion.h4
               viewport={{ once: true }}
@@ -47,12 +47,18 @@ const Home = () => {
               Zahra YL.
             </motion.h4>
           </div>
-          <div className="md:w-4/5 text-xl text-center">
-            <p>
+          <div className="md:w-4/5 w-5/6  text-xl">
+          <motion.p
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ type: "linear", duration: 2.0 }}
+              
+            >
               As a passionate full stack developer, I create innovative and
               high-performance web applications. I offer comprehensive solutions
               tailored to your needs.
-            </p>
+              </motion.p>
           </div>
           
           {/* Social Icons for small screens */}

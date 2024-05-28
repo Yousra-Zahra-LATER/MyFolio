@@ -1,72 +1,33 @@
-import React from 'react';
-import cn from "classnames";
-import {
-  SiTailwindcss,
-  SiVisualstudiocode,
-  SiTypescript,
-  SiNextdotjs,
-} from "react-icons/si";
-import { FaReact, FaNodeJs } from "react-icons/fa";
-
+import React from "react";
 const About = () => {
-  const title = 'Technoloooooooogies';
-  const logoCls =
-    "text-[#291426] hover:!opacity-100 group-hover:opacity-60 duration-300 transition";
-  const ICONS = [
-    {
-      label: "Visual Studio Code",
-      iconName: SiVisualstudiocode,
-      classes: cn(logoCls, "hover:-rotate-6 hover:text-blue-500"),
-    },
-    {
-      label: "TypeScript",
-      iconName: SiTypescript,
-      classes: cn(logoCls, "duration-200 hover:scale-110 hover:text-blue-600"),
-    },
-    {
-      label: "Next.js",
-      iconName: SiNextdotjs,
-      classes: cn(
-        logoCls,
-        "duration-200 hover:scale-110 hover:text-dark dark:hover:text-light"
-      ),
-    },
-    {
-      label: "React",
-      iconName: FaReact,
-      classes: cn(logoCls, "duration-500 hover:rotate-90 hover:text-sky-600"),
-    },
-    {
-      label: "Tailwind",
-      iconName: SiTailwindcss,
-      classes: cn(logoCls, "hover:rotate-12 hover:text-cyan-600"),
-    },
-    {
-      label: "Node.js",
-      iconName: FaNodeJs,
-      classes: cn(logoCls, "hover:scale-110 hover:text-green-600"),
-    },
-  ];
-  
   return (
     <>
-      <div
-        id='tech-logos'
-        className='group flex justify-center gap-6 text-4xl sm:gap-8 sm:text-7xl '
-      >
-        {ICONS.map(({ label, classes, iconName: IconName }) => (
-          //iteration de chaque objet de la liste ICONS avec leurs attributs
-          <div
-            key={label}
-            role='presentation'
-            aria-label={label}
-            title={label}
-            className={classes}
-          >
-            <IconName role='img' aria-label={label} title={label} />
-          </div>
-        ))}
+      <div className="h-screen flex justify-center" style={{
+  backgroundImage: "url('/src/assets/22.jpg')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}}>
+  <div className="xl:w-[70%] flex flex-col pb-16">
+    <span>Introduction</span>
+    <div className="text-6xl md:h-[30%] content-center">About me</div>
+    
+    <div className="flex flex-col-reverse sm:flex-row gap-5">
+      <div className="w-full md:w-[50%] md:h-full flex md:flex-col flex-col gap-5">
+   
+        <p className="md:w-[90%] text-center">Hello there, I'm so happy you ar.</p>
+        <p className="md:w-[90%] text-center">I offer comprehensive solutions tailored to your needs.</p>
+        <p className="md:w-[90%] text-center">With a focus on user experience and performance, my applications are both functional and aesthetically pleasing.</p>
+        <p className="md:w-[90%] text-center">Let's build something great together.</p>
       </div>
+      <div className="w-full md:w-[50%] flex h-full items-center justify-center">
+        <div className="w-[80%] lg:w-[50%] h-[300px] sm:h-[350px] flex justify-center items-center">
+          <img src='/src/assets/222.png' alt="Profile"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </>
   );
 };

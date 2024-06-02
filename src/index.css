@@ -59,8 +59,8 @@
   }
 
   .hero__heading::before {
-    @apply text-xs text-primary-300 font-medium  absolute -top-7 -left-28 sm:text-base dark:text-opacity-80 dark:text-white;
-    content: "Hello There, I am";
+    @apply text-xs text-primary-300 font-medium  absolute -top-7 -left-10 sm:text-base dark:text-opacity-80 dark:text-white;
+    content: "Hello, I am";
   }
 
   .hero__heading::after {

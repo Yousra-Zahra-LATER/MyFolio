@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         signature: ['Great Vibes'],
-       
+        default: ["Poppins", "sans-serif"],
+        display: ["Krona One", "sans-serif"],
       },
       colors: {
         primary: {

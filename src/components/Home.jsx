@@ -28,9 +28,9 @@ const Home = () => {
   return (
     <>
       <div
-        className="h-screen"
+        className="h-screen "
         style={{
-          backgroundImage: "url('/src/assets/flower.jpg')",
+          backgroundImage: "url('/src/assets/flower2.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

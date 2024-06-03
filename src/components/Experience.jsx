@@ -1,29 +1,80 @@
 import React from "react";
-import { m, LazyMotion, domAnimation, motion } from "framer-motion";
 import SectionTitle from "../components/SectionTitle";
+import cn from 'classnames';
+import {
+  SiTailwindcss,
+  SiVisualstudiocode,
+  SiTypescript,
+  SiNextdotjs,
+} from 'react-icons/si'
+import { FaReact, FaNodeJs } from 'react-icons/fa'
+const logoCls =
+"text-[#291426] hover:!opacity-100 group-hover:opacity-60 duration-300 transition";
+
+const ICONS = [
+{
+label: "Visual Studio Code",
+iconName: SiVisualstudiocode,
+classes: cn(logoCls, "hover:-rotate-6 hover:text-blue-500"),
+},
+{
+label: "TypeScript",
+iconName: SiTypescript,
+classes: cn(logoCls, "duration-200 hover:scale-110 hover:text-blue-600"),
+},
+{
+label: "Next.js",
+iconName: SiNextdotjs,
+classes: cn(
+  logoCls,
+  "duration-200 hover:scale-110 hover:text-dark dark:hover:text-light"
+),
+},
+{
+label: "React",
+iconName: FaReact,
+classes: cn(logoCls, "duration-500 hover:rotate-90 hover:text-sky-600"),
+},
+{
+label: "Tailwind",
+iconName: SiTailwindcss,
+classes: cn(logoCls, "hover:rotate-12 hover:text-cyan-600"),
+},
+{
+label: "Node.js",
+iconName: FaNodeJs,
+classes: cn(logoCls, "hover:scale-110 hover:text-green-600"),
+},
+];
+
+
 const Experience = () => {
+ 
   return (
     <>
       <div
         className="w-full flex justify-center md:h-screen"
         style={{
-          backgroundImage: "url('/src/assets/111.png')",
+          backgroundImage: "url('/src/assets/2.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="w-full md:w-[85%] flex flex-col p-2 gap-5 md:gap-5">
           <div className="w-full">
-            <SectionTitle title="ABOUT ME" subtitle="Introduction" />
+            <SectionTitle title="MY JOURNEY" subtitle="Experience" />
           </div>
 
-          <div className="flex w-full md:flex-row flex-col-reverse gap-10 md:gap-0">
-            <div className="w-full sm:w-[60%] md:w-[60%] md:h-full flex flex-col gap-6 items-center justify-center">
-              
-            </div>
+        
+            
+            <div class="grid gap-4 grid-cols-3 grid-rows-3">
+<div>11</div>
+<div> I offer comprehensive solutions tailored to your needs. With a
+                  focus on user experience and performance, my applications are
+                  both functional and aesthetically pleasing.</div>
 
-          
-          </div>
+</div>
+         
         </div>
       </div>
     </>

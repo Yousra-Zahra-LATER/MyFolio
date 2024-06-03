@@ -8,7 +8,7 @@ const About = () => {
       <div
         className="w-full flex justify-center md:h-screen"
         style={{
-          backgroundImage: "url('/src/assets/113.PNG')",
+          backgroundImage: "url('/src/assets/1.PNG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

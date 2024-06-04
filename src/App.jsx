@@ -6,8 +6,7 @@ import MouseParticles from "react-mouse-particles";
 function App() {
   return (
     <>
-      {/*<NavBar/>*/}
-      {/*<Home/> */}
+      <NavBar/>
       <About/>
       <Experience/>
       <MouseParticles

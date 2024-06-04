@@ -27,7 +27,8 @@ export const NavBar = () => {
   ];
 
   return (
-    <div className="w-full h-20 text-black flex justify-between items-center z-50">
+    <div className="w-full h-20 text-black flex justify-between items-center">
+      
       <div className="flex font-signature ml-9 text-5xl hover:-rotate-6">
         Z
         <motion.div
@@ -38,42 +39,23 @@ export const NavBar = () => {
           <GiButterflyFlower />
         </motion.div>
       </div>
-
-      <div className="flex mx-4 items-baseline">
-        <ul className="flex">
+      
+      <div className="flex h-20 items-center gap-56 mr-16">
+        <ul className="flex gap-10 font-semibold">
           {navBarlinks.map((link, index) => (
-            <li key={index} className="px-5 cursor-pointer hover:text-[#807279]">
+            <li key={index} className="cursor-pointer hover:text-[#807279]">
               {link.name}
             </li>
           ))}
         </ul>
-
-        <div className="mx-4" style={{ opacity: 0.2 }}>
-          |
-        </div>
-
-        <motion.div
-          className="flex justify-between"
-          whileHover={{ scale: 1 }}
-          whileTap={{ scale: 0.7 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
-        >
-          <motion.button
-            className="hover:bg-[#f0b2d1] rounded-md py-2 px-2 font-semibold text-black"
-            onClick={""}
-          >
-            Portfolio
-          </motion.button>
-        </motion.div>
-
-        <div onClick={toggleDarkMode} className="cursor-pointer px-4 self-center">
-          {isDarkMode ? (
-            <RiMoonClearFill className="h-6 w-6" />
-          ) : (
-            <SunIcon className="h-6 w-6" />
-          )}
-        </div>
+        <div className="flex gap-9">
+    
+        <buton>portoflio</buton>
+       
       </div>
+      </div>
+
+      
     </div>
   );
 };

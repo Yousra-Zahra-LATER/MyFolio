@@ -17,7 +17,8 @@ const About = () => {
          
 
           <div className="flex w-full md:flex-row flex-col-reverse gap-10 md:gap-0">
-            <div className="w-full sm:w-[60%] md:w-[60%] md:h-full flex flex-col gap-6 items-center justify-center">
+            <div className="w-full sm:w-[60%] md:w-[60%] md:h-full flex flex-col  gap-6 items-center justify-center">
+            
               <LazyMotion features={domAnimation} strict>
                 <m.p
                   className="text-center max-w-lg font-bold"

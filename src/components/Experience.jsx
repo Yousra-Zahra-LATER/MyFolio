@@ -58,12 +58,13 @@ const Experience = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="w-full md:w-[85%] flex flex-col p-2 gap-5 md:gap-5">
+        <div className=" md:w-[90%] flex flex-col p-2 gap-5 md:gap-5">
           <div className="w-full">
             <SectionTitle title="ABOUT ME" subtitle="introduction" />
           </div>
 
-          <div class="grid gap-4 grid-cols-3 grid-rows-3">
+          {/*
+            <div class="grid gap-4 grid-cols-3 grid-rows-3">
             <div>11</div>
             <div>
               {" "}
@@ -73,8 +74,11 @@ const Experience = () => {
               
             </div>
           </div>
+      */}
+
         </div>
-        
+      
+         
       </div>
     </>
   );

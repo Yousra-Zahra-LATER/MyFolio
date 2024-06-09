@@ -7,7 +7,8 @@ import MouseParticles from "react-mouse-particles";
 function App() {
   return (
     <>
-   
+     
+     
       <Contact/>
       <MouseParticles
           g={1}

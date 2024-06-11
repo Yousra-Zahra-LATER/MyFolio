@@ -68,3 +68,6 @@
     content: "Full Stack Web Developper";
   }
 }
+body {
+  @apply bg-custom-pink;
+}

@@ -12,6 +12,7 @@ export default {
         display: ["Krona One", "sans-serif"],
       },
       colors: {
+        'custom-pink': '#FFFBFD',
         primary: {
           DEFAULT: "#222831",
           50: "#E7EAEE",

@@ -45,7 +45,9 @@ export default function Contact() {
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                     PHONE
                   </h2>
-                  <p className="leading-relaxed text-pink-800">+213-667041775</p>
+                  <p className="leading-relaxed text-pink-800">
+                    +213-667041775
+                  </p>
                 </div>
               </div>
             </div>
@@ -58,57 +60,57 @@ export default function Contact() {
             <p className="w-full leading-relaxed mb-5 text-gray-600 text-center">
               I am looking for a new role and would appreciate your support.
               <br />
-              Thank you in advance for any connections, advice, or
-              opportunities you can offer.
+              Thank you in advance for any connections, advice, or opportunities
+              you can offer.
             </p>
-           <div className="lg:px-10 px-2">
-            <div className="mb-4 lg:ml-2 lg:mr-2 lg:w-[92%]">
-              <label
-                htmlFor="name"
-                className="leading-7  text-sm text-gray-600 block mb-2"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter Your Full Name"
-                className="w-full   bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-            <div className="mb-4 lg:ml-2 lg:mr-2 lg:w-[92%]">
-              <label
-                htmlFor="email"
-                className="leading-7 text-sm text-gray-600 block mb-2"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter Your Full Email"
-                className="w-full   bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-            <div className="mb-4 lg:ml-2 lg:mr-2 lg:w-[92%]">
-              <label
-                htmlFor="message"
-                className="leading-7 text-sm text-gray-600 block mb-2"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Message"
-                className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 leading-6 transition-colors duration-200 ease-in-out"
-              ></textarea>
-            </div>
-            <button className="text-white lg:ml-2 lg:mr-2 w-full lg:w-[92%] bg-pink-800 border-0 py-2 px-6 focus:outline-none hover:bg-pink-900 rounded-md text-lg">
-              Send Message
-            </button>
+            <div className="lg:px-10 px-2">
+              <div className="mb-4 lg:mx-2 lg:w-[92%]">
+                <label
+                  htmlFor="name"
+                  className="leading-7 text-sm text-gray-600 block mb-2"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter Your Full Name"
+                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+              <div className="mb-4 lg:mx-2 lg:w-[92%]">
+                <label
+                  htmlFor="email"
+                  className="leading-7 text-sm text-gray-600 block mb-2"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Your Full Email"
+                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+              <div className="mb-4 lg:mx-2 lg:w-[92%]">
+                <label
+                  htmlFor="message"
+                  className="leading-7 text-sm text-gray-600 block mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 leading-6 transition-colors duration-200 ease-in-out"
+                ></textarea>
+              </div>
+              <button className="text-white lg:mx-2 w-full lg:w-[92%] bg-pink-800 border-0 py-2 px-6 focus:outline-none hover:bg-pink-900 rounded-md text-lg">
+                Send Message
+              </button>
             </div>
           </div>
         </div>

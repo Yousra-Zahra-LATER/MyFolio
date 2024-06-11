@@ -8,16 +8,17 @@ import MouseParticles from "react-mouse-particles";
 function App() {
   return (
     <>
-     
-     
-      <Contact/>
-      <Footer/> 
+    
+      <NavBar/>  
+      <Contact />
+      <Footer />
       <MouseParticles
-          g={1}
-          color="random"
-          cull="MuiSvgIcon-root,MuiButton-root"
-          level={6}
-        />
+        g={1}
+        color="random"
+        cull="MuiSvgIcon-root,MuiButton-root"
+        level={6}
+      />
+     
     </>
   );
 }

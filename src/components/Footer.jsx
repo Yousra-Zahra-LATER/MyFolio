@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className='bg-[#FFFBFD] flex flex-col h-36 justify-center items-center text-black gap-2'>
       <div className='flex gap-4'>
-        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-pink-800">
+        <a href="https://github.com/Yousra-Zahra-LATER" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-pink-800">
           <FaGithub />
         </a>
         <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-pink-800">

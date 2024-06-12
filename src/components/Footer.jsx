@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Importatio
 export default function Footer() {
   return (
     // Élément footer avec des classes Tailwind CSS pour le style
-    <footer className='bg-custom-pink flex flex-col h-36 justify-center items-center text-black gap-2'>
+    <footer className='bg-custom-pink flex flex-col h-36 justify-center items-center text-black gap-4'>
       {/* Conteneur pour les icônes avec un espacement entre elles */}
       <div className='flex gap-4'>
         {/* Lien vers le profil GitHub */}

@@ -1,5 +1,6 @@
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
+import FixedDiv from "./FixedDiv"; // Importez le composant FixedDiv ici
 
 export default function Contact() {
   return (
@@ -11,9 +12,9 @@ export default function Contact() {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-[90%] flex flex-col lg:gap-6 gap-6">
+      <div className="w-[90%]  sm:h-max  flex flex-col  lg:gap-6 gap-6">
         <SectionTitle title="CONTACT ME" subtitle="GET IN TOUCH" />
-        <div className="h-auto flex sm:flex-nowrap flex-wrap gap-6">
+        <div className="h-auto flex md:flex-nowrap flex-wrap gap-6">
           {/* First child */}
           <div className="w-full flex flex-col p-1">
             <h2 className="text-gray-900 text-2xl mb-3 font-medium text-center">
@@ -28,14 +29,14 @@ export default function Contact() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102824.25815042057!2d6.645396949999999!3d36.354527499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f17717c4785627%3A0x25fb307fd08801a!2sConstantine!5e0!3m2!1sfr!2sdz!4v1717918789654!5m2!1sfr!2sdz"
                 style={{ filter: "contrast(1.2) opacity(0.7)" }}
               ></iframe>
-              <div className="bg-white relative flex flex-wrap py-2 rounded shadow-md">
-                <div className="lg:w-1/2 px-6">
+              <div className="bg-white relative flex flex-wrap py-2 rounded shadow-md ">
+                <div className="lg:w-1/2 px-6  ">
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                     ADDRESS
                   </h2>
                   <p className="mt-1 text-pink-800">Constantine, ALGERIA</p>
                 </div>
-                <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                <div className="lg:w-1/2 px-6  lg:mt-0">
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                     EMAIL
                   </h2>
@@ -115,6 +116,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <FixedDiv show={false} /> {/* Inclure le composant FixedDiv ici */}
     </div>
   );
 }

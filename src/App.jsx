@@ -9,7 +9,8 @@ function App() {
   return (
     <>
     
-      <NavBar/>  
+      <NavBar/> 
+      <About/>
       <Contact />
       <Footer />
       <MouseParticles

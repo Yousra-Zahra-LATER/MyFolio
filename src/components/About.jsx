@@ -21,8 +21,8 @@ const About = () => {
         }}
       >
         {/* first child */}
-        <div className="w-full md:w-[90%] flex md:flex-row gap-5 items-center justify-center flex-col-reverse my-16">
-          <div className="w-full md:w-1/2 flex flex-col items-center py-8 px-2 gap-5">
+        <div className=" w-[90%] flex md:flex-row gap-5 items-center justify-center flex-col-reverse my-16">
+          <div className="bg-white  md:w-1/2 flex flex-col items-center py-8 px-2 gap-5">
             <div className="w-auto">
               <motion.h4
                 viewport={{ once: true }}
@@ -72,7 +72,7 @@ const About = () => {
               />
             </LazyMotion>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className=" md:w-1/2 flex justify-center">
             <LazyMotion features={domAnimation} strict>
               <m.div
                 initial={{ x: 100, opacity: 0 }}

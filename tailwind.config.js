@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      screens: {
-        'above-800': '800px',
-      },
       fontFamily: {
         signature: ['Great Vibes'],
         default: ["Poppins", "sans-serif"],

@@ -12,7 +12,7 @@ export default function Contact() {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-[90%]  sm:h-max  flex flex-col  lg:gap-6 gap-6">
+      <div className="md:w-[86%] w-[90%]  sm:h-max  flex flex-col  lg:gap-6 gap-6">
         <SectionTitle title="CONTACT ME" subtitle="GET IN TOUCH" />
         <div className="h-auto flex md:flex-nowrap flex-wrap gap-6">
           {/* First child */}
@@ -116,7 +116,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <FixedDiv show={false} /> {/* Inclure le composant FixedDiv ici */}
     </div>
   );
 }

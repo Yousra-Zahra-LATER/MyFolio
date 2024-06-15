@@ -52,22 +52,6 @@
 @layer base{
    
 }
-
-@layer components {
-  .hero__heading {
-    @apply text-6xl text-black relative dark:text-white;
-  }
-
-  .hero__heading::before {
-    @apply  text-primary-400 font-medium  absolute -top-7 -left-16 text-base dark:text-opacity-80 dark:text-white;
-    content: "Hello there, I am";
-  }
-
-  .hero__heading::after {
-    @apply text-primary-400 font-medium  absolute -bottom-8 -right-28 text-base dark:text-opacity-80 dark:text-white;
-    content: "Full Stack Web Developper";
-  }
-}
 body {
   @apply bg-custom-pink;
 }

@@ -30,7 +30,7 @@ const About = () => {
       <div
         className="w-full flex justify-center md:h-screen"
         style={{
-          backgroundImage: "url('/src/assets/45.PNG')",
+          backgroundImage: "url('/src/assets/53.PNG')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -6,7 +6,7 @@ import FixedDiv from "./FixedDiv";
 import githubIcon from "../assets/github.svg";
 import emailIcon from "../assets/email.svg";
 import linkedinIcon from "../assets/linkedin.svg";
-
+import { Element } from 'react-scroll';
 const socials = [
   {
     logo: linkedinIcon,
@@ -24,10 +24,12 @@ const socials = [
     link: "mailto:example@example.com",
   },
 ];
+
 const About = () => {
   return (
     <>
-      <div
+      <Element
+        name="home"
         className="w-full flex justify-center md:h-screen"
         style={{
           backgroundImage: "url('/src/assets/53.PNG')",
@@ -35,7 +37,6 @@ const About = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* first child */}
         <div className=" md:w-[86%] w-[90%] flex md:flex-row  md:gap-2 gap-12 items-center flex-col-reverse my-10">
           <div className="md:w-[50%] flex flex-col gap-8 ">
             <div className="relative w-auto text-center">
@@ -58,7 +59,7 @@ const About = () => {
             </div>
 
             <LazyMotion features={domAnimation} strict>
-            <m.p
+              <m.p
                 className="text-center font-bold mt-5 "
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -89,7 +90,7 @@ const About = () => {
                 Node.js, React, SQL, and MongoDB. I design scalable, efficient
                 applications that ensure seamless integration across the stack.
                 Explore my portfolio to see my innovative projects and discover
-                how my skills can add value to your team. 
+                how my skills can add value to your team.
               </m.p>
               <m.p
                 className="text-center font-bold "
@@ -102,49 +103,50 @@ const About = () => {
                   damping: 50,
                 }}
               >
-              Let's connect and
-                create exceptional web experiences together.
+                Let's connect and create exceptional web experiences together.
               </m.p>
-              {/*je veux ajouter ici les icones de social media quand la taille de lecran est moins de  768px*/}
-              {/* Social Icons for small screens */}
-          <div className="flex flex-row justify-center items-center w-full gap-3 md:hidden">
-          <ul className="flex flex-row justify-center items-center w-full gap-3 md:flex-col">
-          {socials.map((social, index) => (
-              <m.li
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  default: {
-                    duration: 0.3,
-                    ease: [0, 0.71, 0.2, 1.01],
-                  },
-                  scale: {
-                    type: "spring",
-                    damping: 5,
-                    stiffness: 100,
-                    restDelta: 0.001,
-                  },
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 1.15 }}
-                key={index}
-                className="rounded-full ml-3"
-              >
-                <a href={social.link} target="_blank" rel="noopener noreferrer">
-                  <img
-                    className="h-13 w-13 p-4 transition-all"
-                    src={social.logo}
-                    alt={social.alt}
-                  />
-                </a>
-              </m.li>
-            ))}
-            </ul>
-          </div>
-             <div className="flex justify-center">
-              <button className="text-white w-1/2 bg-pink-800 border-0 py-2 px-6 focus:outline-none hover:bg-pink-900 rounded-md text-lg">
-                Hire me
-              </button>
+              <div className="flex flex-row justify-center items-center w-full gap-3 md:hidden">
+                <ul className="flex flex-row justify-center items-center w-full gap-3 md:flex-col">
+                  {socials.map((social, index) => (
+                    <m.li
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        default: {
+                          duration: 0.3,
+                          ease: [0, 0.71, 0.2, 1.01],
+                        },
+                        scale: {
+                          type: "spring",
+                          damping: 5,
+                          stiffness: 100,
+                          restDelta: 0.001,
+                        },
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1.15 }}
+                      key={index}
+                      className="rounded-full ml-3"
+                    >
+                      <a
+                        href={social.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          className="h-13 w-13 p-4 transition-all"
+                          src={social.logo}
+                          alt={social.alt}
+                        />
+                      </a>
+                    </m.li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex justify-center">
+                <button className="text-white w-1/2 bg-pink-800 border-0 py-2 px-6 focus:outline-none hover:bg-pink-900 rounded-md text-lg">
+                  Hire me
+                </button>
               </div>
               <FontAwesomeIcon
                 icon={faChevronDown}
@@ -170,10 +172,8 @@ const About = () => {
             </LazyMotion>
           </div>
         </div>
-
-        {/* second child */}
         <FixedDiv show={true} />
-      </div>
+      </Element>
     </>
   );
 };

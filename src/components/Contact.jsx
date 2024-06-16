@@ -1,10 +1,11 @@
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
-import FixedDiv from "./FixedDiv"; // Importez le composant FixedDiv ici
+import { Element } from "react-scroll";
 
 export default function Contact() {
   return (
-    <div
+    <Element
+        name="contact"
       className="w-full flex justify-center md:h-screen text-gray-800"
       style={{
         backgroundImage: "url('/src/assets/2.png')",
@@ -116,6 +117,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 }

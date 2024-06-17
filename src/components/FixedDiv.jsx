@@ -9,17 +9,17 @@ const socials = [
   {
     logo: linkedinIcon,
     alt: "Linkedin Icon",
-    link: "https://www.linkedin.com/in/felixmacaspac/",
+    link: "https://www.linkedin.com/in/yousra-zahra-later-956443260/",
   },
   {
     logo: githubIcon,
     alt: "Github Icon",
-    link: "https://github.com/felixmacaspac",
+    link: "https://github.com/Yousra-Zahra-LATER",
   },
   {
     logo: emailIcon,
     alt: "Email Icon",
-    link: "mailto:example@example.com",
+    link: "yousra.later@univ-constantine2.dz",
   },
 ];
 

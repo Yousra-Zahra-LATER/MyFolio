@@ -8,7 +8,6 @@ import MouseParticles from "react-mouse-particles";
 function App() {
   return (
     <>
-    
       <NavBar/> 
       <About/>
       <Contact />

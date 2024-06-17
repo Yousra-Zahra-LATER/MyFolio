@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import { SunIcon } from "@heroicons/react/24/solid";
 import { RiMoonClearFill } from "react-icons/ri";
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 export const NavBar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -52,7 +52,7 @@ export const NavBar = () => {
           ))}
         </div>
         <div className="hidden md:flex items-center">
-          <button className="bg-pink-800 text-white px-4 py-2 rounded-md mr-4">
+          <button className="bg-pink-800 hover:bg-pink-900 text-white px-4 py-2 rounded-md mr-4">
             Portfolio
           </button>
           <button onClick={toggleDarkMode} className="cursor-pointer px-4">

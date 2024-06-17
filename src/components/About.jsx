@@ -6,7 +6,7 @@ import FixedDiv from "./FixedDiv";
 import githubIcon from "../assets/github.svg";
 import emailIcon from "../assets/email.svg";
 import linkedinIcon from "../assets/linkedin.svg";
-import { Element } from 'react-scroll';
+import { Element, Link } from "react-scroll";
 const socials = [
   {
     logo: linkedinIcon,
@@ -144,9 +144,16 @@ const About = () => {
                 </ul>
               </div>
               <div className="flex justify-center">
-                <button className="text-white w-1/2 bg-pink-800 border-0 py-2 px-6 focus:outline-none hover:bg-pink-900 rounded-md text-lg">
-                  Hire me
-                </button>
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={800}
+                  className="w-[40%]"
+                >
+                  <button className="text-white w-full bg-pink-800 hover:bg-pink-900 border-0 py-2 px-6 focus:outline-none rounded-md text-lg cursor-pointer">
+                    Hire me
+                  </button>
+                </Link>
               </div>
               <FontAwesomeIcon
                 icon={faChevronDown}

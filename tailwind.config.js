@@ -1,18 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        signature: ['Great Vibes'],
+        signature: ["Great Vibes"],
         default: ["Poppins", "sans-serif"],
         display: ["Krona One", "sans-serif"],
       },
       colors: {
-        'custom-pink': '#FFFBFD',
+        "custom-pink": "#FFFBFD",
         primary: {
           DEFAULT: "#222831",
           50: "#E7EAEE",
@@ -37,20 +34,10 @@ export default {
           700: "#1A0080",
           800: "#0C003D",
         },
-        neutral: {
-          DEFAULT: "#EEEEEE",
-        },
+       
       },
     },
   },
-  container: {
-    center: true, // serves as margin-inline: auto;
-    padding: {
-      DEFAULT: "1rem",
-    },
-    screens: {
-      "2xl": "1440px",
-    },
-  },
+  
   plugins: [],
 };

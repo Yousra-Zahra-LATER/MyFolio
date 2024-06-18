@@ -1,53 +1,21 @@
-import React from "react";
-import SectionTitle from "../components/SectionTitle";
-import cn from "classnames";
+import React, { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  SiTailwindcss,
-  SiVisualstudiocode,
-  SiTypescript,
-  SiNextdotjs,
-} from "react-icons/si";
-import { FaReact, FaNodeJs } from "react-icons/fa";
-const logoCls =
-  "text-[#291426] hover:!opacity-100 group-hover:opacity-60 duration-300 transition";
-
-const ICONS = [
-  {
-    label: "Visual Studio Code",
-    iconName: SiVisualstudiocode,
-    classes: cn(logoCls, "hover:-rotate-6 hover:text-blue-500"),
-  },
-  {
-    label: "TypeScript",
-    iconName: SiTypescript,
-    classes: cn(logoCls, "duration-200 hover:scale-110 hover:text-blue-600"),
-  },
-  {
-    label: "Next.js",
-    iconName: SiNextdotjs,
-    classes: cn(
-      logoCls,
-      "duration-200 hover:scale-110 hover:text-dark dark:hover:text-light"
-    ),
-  },
-  {
-    label: "React",
-    iconName: FaReact,
-    classes: cn(logoCls, "duration-500 hover:rotate-90 hover:text-sky-600"),
-  },
-  {
-    label: "Tailwind",
-    iconName: SiTailwindcss,
-    classes: cn(logoCls, "hover:rotate-12 hover:text-cyan-600"),
-  },
-  {
-    label: "Node.js",
-    iconName: FaNodeJs,
-    classes: cn(logoCls, "hover:scale-110 hover:text-green-600"),
-  },
-];
-
+  faBriefcase,
+  faGraduationCap,
+  faTools,
+} from "@fortawesome/free-solid-svg-icons";
+import SectionTitle from "../components/SectionTitle";
+import { motion } from "framer-motion";
+import { BriefcaseIcon, CalendarIcon } from "@heroicons/react/24/solid";
 const Experience = () => {
+  const [activeTab, setActiveTab] = useState("tab1");
+
+  const handleTabChange = (newValue) => {
+    setActiveTab(newValue);
+  };
+
   return (
     <>
       <div
@@ -58,27 +26,131 @@ const Experience = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className=" md:w-[90%] flex flex-col p-2 gap-5 md:gap-5">
-          <div className="w-full">
-            <SectionTitle title="ABOUT ME" subtitle="introduction" />
-          </div>
+        <div className="w-full md:w-[86%] flex flex-col">
+          <SectionTitle title="MY JOURNEY" subtitle="EXPERIENCE" />
 
-          {/*
-            <div class="grid gap-4 grid-cols-3 grid-rows-3">
-            <div>11</div>
-            <div>
-              {" "}
-              I offer comprehensive solutions tailored to your needs. With a
-              focus on user experience and performance, my applications are both
-              functional and aesthetically pleasing.
-              
+          <Tabs defaultValue="tab1" className="flex flex-col h-full m-6 ">
+            <TabsList className="w-[50%] mx-auto flex gap-7 justify-center h-14 bg-pink-100 rounded-md">
+              <TabsTrigger
+                value="tab1"
+                className={`rounded my-1 w-[20%] flex items-center justify-center text-center ${
+                  activeTab === "tab1" ? "bg-pink-900 text-white" : "text-black"
+                }`}
+                onClick={() => handleTabChange("tab1")}
+              >
+                <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
+                Experience
+              </TabsTrigger>
+              <TabsTrigger
+                value="tab2"
+                className={`rounded my-1 w-[20%] flex items-center justify-center text-center ${
+                  activeTab === "tab2" ? "bg-pink-900 text-white" : "text-black"
+                }`}
+                onClick={() => handleTabChange("tab2")}
+              >
+                <FontAwesomeIcon icon={faGraduationCap} className="mr-2" />
+                Education
+              </TabsTrigger>
+              <TabsTrigger
+                value="tab3"
+                className={`rounded my-1 w-[20%] flex items-center justify-center text-center ${
+                  activeTab === "tab3" ? "bg-pink-900 text-white" : "text-black"
+                }`}
+                onClick={() => handleTabChange("tab3")}
+              >
+                <FontAwesomeIcon icon={faTools} className="mr-2" />
+                Skills
+              </TabsTrigger>
+            </TabsList>
+
+            <div className="rounded w-[70%] mx-auto h-full flex flex-col items-center m-3">
+              <TabsContent value="tab1">
+                <motion.div
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true }}
+                  className="grid grid-cols-1 gap-10 items-center md:grid-cols-2"
+                >
+                  <motion.div
+                    variants={{
+                      offscreen: {
+                        y: 150,
+                      },
+                      onscreen: {
+                        y: 0,
+                        transition: {
+                          type: "spring",
+                          bounce: 0.4,
+                          duration: 1,
+                        },
+                      },
+                    }}
+                    whileHover={{ scale: 1.02 }}
+                    className="cursor-pointer bg-gray-50 px-6 py-16 rounded-3xl h-full filter shadow-md relative md:px-10 dark:bg-primary-500"
+                  >
+                    <h6 className="text-2xl font-bold text-primary mb-4 dark:text-white">
+                      <a
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        IT Operations Engineer
+                      </a>
+                      <span className="mt-4 text-xs flex items-center justify-start uppercase text-neutral-600 dark:text-neutral-300">
+                        <CalendarIcon className="h-4 mr-2 text-neutral-600 dark:text-neutral-300" />
+                        January 2024 - Present
+                      </span>
+                      <span className="mt-2 text-xs flex items-center justify-start uppercase text-neutral-600 dark:text-neutral-300">
+                        <BriefcaseIcon className="h-4 mr-2 text-neutral-600 dark:text-neutral-300" />
+                        Data Center - Algeria Telecom
+                      </span>
+                    </h6>
+
+                    <div className="relative mb-4">
+                      <div
+                        className="absolute inset-0 flex items-center"
+                        aria-hidden="true"
+                      >
+                        <div className="w-full border-t-4 border-gray-300" />
+                      </div>
+                      <div className="relative flex justify-center">
+                        <span className="uppercase px-2 bg-gray-50 text-sm text-gray-500 dark:bg-primary-500">
+                          duties & responsibilities
+                        </span>
+                      </div>
+                    </div>
+
+                    <ul className="text-base text-primary-400 list-inside list-disc dark:text-neutral-200">
+                      <li>
+                        Deploy, configure, and maintain IT infrastructure
+                        including servers, networks, storage systems, and
+                        virtual environments.
+                      </li>
+                      <li>
+                        Monitor system performance and troubleshoot issues to
+                        ensure optimal operation and reliability.
+                      </li>
+                      <li>
+                        Respond to IT incidents, service requests, and problems
+                        promptly and effectively.
+                      </li>
+                      <li>
+                        Automate routine operational tasks using scripting
+                        languages (e.g., Python, PowerShell) and automation
+                        tools (e.g., Ansible, Puppet).
+                      </li>
+                    </ul>
+                  </motion.div>
+                </motion.div>
+              </TabsContent>
+              <TabsContent value="tab2">
+                <p>study</p>
+              </TabsContent>
+              <TabsContent value="tab3">
+                <p>skills</p>
+              </TabsContent>
             </div>
-          </div>
-      */}
-
+          </Tabs>
         </div>
-      
-         
       </div>
     </>
   );

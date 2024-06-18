@@ -81,7 +81,7 @@ const Experience = () => {
                         transition: {
                           type: "spring",
                           bounce: 0.4,
-                          duration: 1,
+                          duration: 5,
                         },
                       },
                     }}
@@ -89,12 +89,7 @@ const Experience = () => {
                     className="cursor-pointer bg-gray-50 px-6 py-16 rounded-3xl h-full filter shadow-md relative md:px-10 dark:bg-primary-500"
                   >
                     <h6 className="text-2xl font-bold text-primary mb-4 dark:text-white">
-                      <a
-                        target="_blank"
-                        className="hover:underline"
-                      >
-                        IT Operations Engineer
-                      </a>
+                      <a>IT Operations Engineer</a>
                       <span className="mt-4 text-xs flex items-center justify-start uppercase text-neutral-600 dark:text-neutral-300">
                         <CalendarIcon className="h-4 mr-2 text-neutral-600 dark:text-neutral-300" />
                         January 2024 - Present
@@ -110,7 +105,7 @@ const Experience = () => {
                         className="absolute inset-0 flex items-center"
                         aria-hidden="true"
                       >
-                        <div className="w-full border-t-4 border-gray-300" />
+                        <div className="w-full border-t-4 border-pink-100" />
                       </div>
                       <div className="relative flex justify-center">
                         <span className="uppercase px-2 bg-gray-50 text-sm text-gray-500 dark:bg-primary-500">

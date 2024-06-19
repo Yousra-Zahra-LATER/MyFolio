@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <Element
         name="contact"
-      className="w-full flex justify-center md:h-screen text-gray-800"
+      className="w-full flex justify-center md:h-screen "
       style={{
         backgroundImage: "url('/src/assets/2.png')",
         backgroundSize: "cover",

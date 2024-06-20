@@ -37,22 +37,22 @@ const About = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className=" md:w-[86%] w-[90%] flex md:flex-row  md:gap-2 gap-12 items-center flex-col-reverse my-10">
-          <div className="md:w-[50%] flex flex-col gap-8 ">
-            <div className="relative w-auto text-center">
+        <div className=" md:w-[86%] w-[90%] flex md:flex-row   gap-5 items-center flex-col-reverse my-auto">
+          <div className="md:w-[50%]  flex flex-col gap-3.5 ">
+            <div className="relative text-center ">
               <motion.div
                 viewport={{ once: true }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ type: "linear", duration: 2.0 }}
               >
-                <div className="absolute -top-7 left-12 text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
+                <div className=" text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
                   Hello there, I am
                 </div>
                 <h4 className="text-7xl font-bold whitespace-nowrap text-black relative dark:text-white">
                   Zahra YL.
                 </h4>
-                <div className="absolute -bottom-7 right-0  text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
+                <div className=" right-0  text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
                   Full Stack Web Developer
                 </div>
               </motion.div>
@@ -161,7 +161,7 @@ const About = () => {
               />
             </LazyMotion>
           </div>
-          <div className=" md:w-1/2 flex justify-center">
+          <div className=" md:w-[50%]  flex justify-center">
             <LazyMotion features={domAnimation} strict>
               <m.div
                 initial={{ x: 100, opacity: 0 }}

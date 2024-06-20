@@ -37,30 +37,31 @@ const About = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className=" md:w-[86%] w-[90%] flex md:flex-row   gap-5 items-center flex-col-reverse my-auto">
-          <div className="md:w-[50%]  flex flex-col gap-3.5 ">
-            <div className="relative text-center ">
-              <motion.div
-                viewport={{ once: true }}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ type: "linear", duration: 2.0 }}
-              >
-                <div className=" text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
-                  Hello there, I am
-                </div>
-                <h4 className="text-7xl font-bold whitespace-nowrap text-black relative dark:text-white">
-                  Zahra YL.
-                </h4>
-                <div className=" right-0  text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
-                  Full Stack Web Developer
-                </div>
-              </motion.div>
-            </div>
+        <div className=" md:w-[86%]  w-11/12 flex md:flex-row gap-5 items-center flex-col-reverse ">
+          <div className="md:w-[50%] max-h-full flex flex-col lg:gap-7 md:gap-3.5 gap-6">
+          <motion.div
+  viewport={{ once: true }}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ type: "linear", duration: 2.0 }}
+  className="flex flex-col items-center"
+>
+  <div className= "self-start md:mb-1 text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
+    Hello there, I am
+  </div>
+  <h4 className="right-7 lg:right-8 lg:text-7xl md:text-6xl text-7xl font-bold whitespace-nowrap text-black relative dark:text-white">
+    Zahra YL.
+  </h4>
+  <div className="self-end md:mt-1 text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white ">
+    Full Stack Web Developer
+  </div>
+</motion.div>
+
+            
 
             <LazyMotion features={domAnimation} strict>
               <m.p
-                className="text-center font-bold mt-5 "
+                className="text-center font-bold mt-3 "
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
@@ -161,7 +162,7 @@ const About = () => {
               />
             </LazyMotion>
           </div>
-          <div className=" md:w-[50%]  flex justify-center">
+          
             <LazyMotion features={domAnimation} strict>
               <m.div
                 initial={{ x: 100, opacity: 0 }}
@@ -172,12 +173,12 @@ const About = () => {
                   stiffness: 90,
                   damping: 10,
                 }}
-                className="flex justify-center"
+                className=" md:w-[50%] flex justify-center "
               >
                 <img src="/src/assets/moi8.png" alt="Profile" />
               </m.div>
             </LazyMotion>
-          </div>
+          
         </div>
         <FixedDiv show={true} />
       </Element>

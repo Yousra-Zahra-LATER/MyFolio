@@ -28,7 +28,7 @@ export const NavBar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="flex justify-between items-center w-11/12 mx-auto py-4">
+      <nav className="flex justify-between items-center w-11/12 mx-auto py-4 ">
         <div className="flex items-center font-signature text-5xl hover:-rotate-6">
           Z
           <motion.div

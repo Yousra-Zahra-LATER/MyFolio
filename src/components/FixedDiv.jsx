@@ -19,7 +19,7 @@ const socials = [
   {
     logo: emailIcon,
     alt: "Email Icon",
-    link: "yousra.later@univ-constantine2.dz",
+    link: "mailto:yousra.later@univ-constantine2.dz",
   },
 ];
 

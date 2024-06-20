@@ -30,7 +30,7 @@ const About = () => {
     <>
       <Element
         name="home"
-        className="w-full flex justify-center md:h-screen"
+        className="w-full flex justify-center min-h-screen"
         style={{
           backgroundImage: "url('/src/assets/53.PNG')",
           backgroundSize: "cover",
@@ -38,7 +38,7 @@ const About = () => {
         }}
       >
         <div className=" md:w-[86%]  w-11/12 flex md:flex-row gap-5 items-center flex-col-reverse ">
-          <div className="md:w-[50%] max-h-full flex flex-col lg:gap-7 md:gap-3.5 gap-6">
+          <div className="md:w-[50%] flex flex-col lg:gap-7 md:gap-3.5 gap-6">
           <motion.div
   viewport={{ once: true }}
   initial={{ opacity: 0, y: 30 }}

@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import { BriefcaseIcon, CalendarIcon } from "@heroicons/react/24/solid";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import githubIcon from "../assets/github.svg";
 const Experience = () => {
   const [activeTab, setActiveTab] = useState("tab1");
 
@@ -29,8 +30,7 @@ const Experience = () => {
     <>
       <Element
         name="experience"
-        className="w-full flex justify-center min-h-screen bg-custom-pink"
-        
+        className="w-full flex justify-center min-h-screen "
       >
         <div className="md:w-[86%] w-11/12 flex flex-col gap-6 ">
           <SectionTitle title="MY JOURNEY" subtitle="EXPERIENCE" />
@@ -71,7 +71,7 @@ const Experience = () => {
                 Skills
               </TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="tab1">
               <motion.div
                 initial="offscreen"
@@ -217,25 +217,22 @@ const Experience = () => {
                           data-aos="fade-right"
                           data-aos-delay="100"
                           data-aos-duration="1200"
-                          className="bg-purple-100 p-4 rounded shadow group hover:bg-black cursor-pointer "
+                          className="bg-pink-100 p-4 rounded shadow group hover:bg-pink-900 cursor-pointer "
                         >
-                          <h3 className="text-black font-[600] mb-3 group-hover:text-white text-xl">
+                          <h3 className="text-black font-[600] group-hover:text-white text-xl">
                             Master Degree
                           </h3>
-                          <div className="w-[50%] border-t border-pink-900" />
-                          <p className="text-[15px] text-smallTextColor group-hover:text-white leading-7">
-                            2020 - 2022 <br />
+
+                          <p className="text-[15px] group-hover:text-white leading-6">
+                            2020 - 2022
+                            <br />
                             Software Engineer <br />
                             Abdelhamid Mehri University - Constantine - Algeria
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-full bg-primaryColor border-black border-4 w-6 h-6 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center">
-                      <figure>
-                        <img src="" alt="" />
-                      </figure>
-                    </div>
+                    <div className="rounded-full  bg-pink-900 border-custom-pink border-4 w-6 h-6 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"></div>
                   </div>
                 </div>
 
@@ -247,12 +244,12 @@ const Experience = () => {
                           data-aos="fade-left"
                           data-aos-delay="100"
                           data-aos-duration="1200"
-                          className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer "
+                          className="bg-purple-100 p-4 rounded shadow group hover:bg-pink-900  cursor-pointer "
                         >
-                          <h3 className="text-primaryColor font-[600] mb-3 group-hover:text-white text-xl">
+                          <h3 className="text-black font-[600] group-hover:text-white text-xl">
                             Licence Degree
                           </h3>
-                          <p className="text-[15px] text-smallTextColor group-hover:text-white leading-7">
+                          <p className="text-[15px] group-hover:text-white leading-6">
                             2017 - 2020 <br />
                             Software Engineer <br />
                             Abdelhamid Mehri University - Constantine - Algeria
@@ -260,11 +257,7 @@ const Experience = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-full bg-black border-black border-4 w-6 h-6 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center">
-                      <figure>
-                        <img src="" alt="" />
-                      </figure>
-                    </div>
+                    <div className="rounded-full  bg-pink-900 border-custom-pink border-4 w-6 h-6 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"></div>
                   </div>
                 </div>
 
@@ -276,12 +269,12 @@ const Experience = () => {
                           data-aos="fade-right"
                           data-aos-delay="100"
                           data-aos-duration="1200"
-                          className="  bg-purple-100 p-4 rounded shadow group hover:bg-black cursor-pointer "
+                          className="bg-pink-200 p-4 rounded shadow group hover:bg-pink-900 cursor-pointer "
                         >
-                          <h3 className="text-black font-[600] mb-3 group-hover:text-white text-xl">
+                          <h3 className="text-black font-[600] group-hover:text-white text-xl">
                             Baccalaureat
                           </h3>
-                          <p className="text-[15px] text-smallTextColor group-hover:text-white leading-7">
+                          <p className="text-[15px] group-hover:text-white leading-6">
                             2016 - 2017 <br />
                             Science Experimentale <br />
                             Malek Hadded Lycee - Constantine - Algeria
@@ -289,19 +282,64 @@ const Experience = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-full bg-primaryColor border-black border-4 w-6 h-6 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center">
-                      <figure>
-                        <img src="" alt="" />
-                      </figure>
-                    </div>
+                    <div className="rounded-full  bg-pink-900 border-custom-pink border-4 w-6 h-6 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"></div>
                   </div>
                 </div>
               </div>
             </TabsContent>
 
-            <TabsContent value="tab3">
-              <p>skills</p>
-            </TabsContent>
+            <TabsContent value="tab3" className="flex justify-center">
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 w-full max-w-screen-lg">
+    <div className="text-center mb-5">
+      <h4 className="text-lg font-semibold mb-2 text-nowrap">
+        Programming Languages
+      </h4>
+      <div className="border-b-2 bg-pink-100 mb-4"></div>
+      <div className="grid grid-cols-2 gap-4 w-44 mx-auto">
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+      </div>
+    </div>
+
+    <div className="text-center mb-5">
+      <h4 className="text-lg font-semibold mb-2">
+        Database Management
+      </h4>
+      <div className="border-b-2 bg-pink-100 mb-4"></div>
+      <div className="grid grid-cols-2 gap-4 w-44 mx-auto">
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+      </div>
+    </div>
+
+    <div className="text-center mb-5">
+      <h4 className="text-lg font-semibold mb-2">Frameworks</h4>
+      <div className="border-b-2 bg-pink-100 mb-4"></div>
+      <div className="grid grid-cols-2 gap-4 w-44 mx-auto">
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+      </div>
+    </div>
+
+    <div className="text-center mb-5">
+      <h4 className="text-lg font-semibold mb-2">Tools</h4>
+      <div className="border-b-2 bg-pink-100 mb-4"></div>
+      <div className="grid grid-cols-2 gap-4 w-44 mx-auto">
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+        <p>java logo python logo c sharp logo</p>
+      </div>
+    </div>
+  </div>
+</TabsContent>
+
           </Tabs>
         </div>
       </Element>

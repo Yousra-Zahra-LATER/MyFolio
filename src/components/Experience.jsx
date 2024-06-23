@@ -12,7 +12,16 @@ import { motion } from "framer-motion";
 import { BriefcaseIcon, CalendarIcon } from "@heroicons/react/24/solid";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import githubIcon from "../assets/github.svg";
+import {
+  SiVisualstudiocode,
+  SiTypescript,
+  SiMysql,
+  SiMongodb,
+  SiReact,
+  SiAngular,
+  SiGit,
+} from "react-icons/si";
+import cn from "classnames";
 const Experience = () => {
   const [activeTab, setActiveTab] = useState("tab1");
 
@@ -26,6 +35,81 @@ const Experience = () => {
     });
   }, []);
 
+  const logoCls =
+    "opacity-60 transition duration-300 hover:!opacity-100 group-hover:opacity-30";
+
+  const ListData = [
+    {
+      category: "Programming Languages",
+      items: [
+        {
+          label: "Visual Studio Code",
+          icon: SiVisualstudiocode,
+          classes: "hover:-rotate-6 hover:text-blue-500",
+        },
+        {
+          label: "TypeScript",
+          icon: SiTypescript,
+          classes: "hover:-rotate-6 hover:text-blue-500",
+        },
+        {
+          label: "Visual Studio Code",
+          icon: SiVisualstudiocode,
+          classes: "hover:-rotate-6 hover:text-blue-500",
+        },
+        {
+          label: "TypeScript",
+          icon: SiTypescript,
+          classes: cn(logoCls, "hover:-rotate-6 hover:text-blue-500"),
+        },
+      ],
+    },
+    {
+      category: "Database Management",
+      items: [
+        {
+          label: "MySQL",
+          icon: SiMysql,
+          classes: "hover:-rotate-6 ",
+        },
+        {
+          label: "MongoDB",
+          icon: SiMongodb,
+          classes: "hover:scale-110 hover:text-[#3078C6]",
+        },
+      ],
+    },
+    {
+      category: "Frameworks",
+      items: [
+        {
+          label: "React",
+          icon: SiReact,
+          classes: "hover:-rotate-6 hover:text-[#20A6F2]",
+        },
+        {
+          label: "Angular",
+          icon: SiAngular,
+          classes: "hover:scale-110 hover:text-[#3078C6]",
+        },
+      ],
+    },
+    {
+      category: "Tools",
+      items: [
+        {
+          label: "Visual Studio Code",
+          icon: SiVisualstudiocode,
+          classes: "hover:-rotate-6 hover:text-[#20A6F2]",
+        },
+        {
+          label: "Git",
+          icon: SiGit,
+          classes: "hover:scale-110 hover:text-[#3078C6]",
+        },
+      ],
+    },
+  ];
   return (
     <>
       <Element
@@ -288,58 +372,32 @@ const Experience = () => {
               </div>
             </TabsContent>
 
-            <TabsContent value="tab3" className="flex justify-center">
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 w-full max-w-screen-lg">
-    <div className="text-center mb-5">
-      <h4 className="text-lg font-semibold mb-2 text-nowrap">
-        Programming Languages
-      </h4>
-      <div className="border-b-2 bg-pink-100 mb-4"></div>
-      <div className="grid grid-cols-2 gap-4 w-44 mx-auto">
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-      </div>
-    </div>
-
-    <div className="text-center mb-5">
-      <h4 className="text-lg font-semibold mb-2">
-        Database Management
-      </h4>
-      <div className="border-b-2 bg-pink-100 mb-4"></div>
-      <div className="grid grid-cols-2 gap-4 w-44 mx-auto">
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-      </div>
-    </div>
-
-    <div className="text-center mb-5">
-      <h4 className="text-lg font-semibold mb-2">Frameworks</h4>
-      <div className="border-b-2 bg-pink-100 mb-4"></div>
-      <div className="grid grid-cols-2 gap-4 w-44 mx-auto">
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-      </div>
-    </div>
-
-    <div className="text-center mb-5">
-      <h4 className="text-lg font-semibold mb-2">Tools</h4>
-      <div className="border-b-2 bg-pink-100 mb-4"></div>
-      <div className="grid grid-cols-2 gap-4 w-44 mx-auto">
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-        <p>java logo python logo c sharp logo</p>
-      </div>
-    </div>
-  </div>
-</TabsContent>
-
+            <TabsContent
+              value="tab3"
+              className="flex md:flex-row justify-center flex-wrap md:gap-12 gap-5"
+            >
+              {ListData.map((category, index) => (
+                <div key={index} className="text-center mb-5">
+                  <h4 className="text-lg font-semibold mb-2 text-nowrap">
+                    {category.category}
+                  </h4>
+                  <div className="border-b-2 bg-pink-100 mb-4"></div>
+                  <div className="grid grid-cols-2 gap-4 w-48 mx-auto">
+                    {category.items.map((item, idx) => (
+                      <div key={idx} className="flex justify-center ">
+                        <item.icon
+                          className={cn(
+                            "aspect-square h-12 w-auto opacity-60 transition duration-300 ",
+                            item.classes
+                          )}
+                          title={item.label}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </TabsContent>
           </Tabs>
         </div>
       </Element>

@@ -7,6 +7,7 @@ import githubIcon from "../assets/github.svg";
 import emailIcon from "../assets/email.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 import { Element, Link } from "react-scroll";
+import Button from "../constant/Button";
 const socials = [
   {
     logo: linkedinIcon,
@@ -151,9 +152,7 @@ const About = () => {
                   duration={800}
                   className="w-[40%]"
                 >
-                  <button className="text-white w-full bg-pink-800 hover:bg-pink-900 border-0 py-2 px-6 focus:outline-none rounded-md text-lg cursor-pointer">
-                    Hire me
-                  </button>
+                  <Button text="Hire me" additionalClasses=" py-2 w-full" />
                 </Link>
               </div>
               <FontAwesomeIcon

@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import { SunIcon } from "@heroicons/react/24/solid";
 import { RiMoonClearFill } from "react-icons/ri";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
+import Button from "../constant/Button";
+import CV from "../assets/CV.pdf"; // Import the PDF file
 
 export const NavBar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -24,6 +26,13 @@ export const NavBar = () => {
     { name: "Projects", link: "projects" },
     { name: "Contact", link: "contact" },
   ];
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = CV;
+    link.download = 'CV-Yousra-Zahra-LATER.pdf'; // Nom du fichier téléchargé
+    link.click();
+  };
 
   return (
     <>
@@ -53,17 +62,25 @@ export const NavBar = () => {
           ))}
         </div>
         <div className="hidden md:flex items-center space-x-4">
-          <button className="bg-pink-800 hover:bg-pink-900 text-white px-4 py-2 rounded-md">
-            Portfolio
-          </button>
-          <button onClick={toggleDarkMode} className="cursor-pointer px-4">
-            {isDarkMode ? (
-              <RiMoonClearFill className="h-6 w-6 text-blue-400" />
-            ) : (
-              <SunIcon className="h-6 w-6 text-black" />
-            )}
-          </button>
-        </div>
+  <div className="relative">
+  <button className="bg-custom-pink border  border-pink-900 hover:bg-pink-900 hover:text-white text-black font-semibold px-4 py-2 rounded-md">
+  Portfolio
+</button>
+  
+    <span className="absolute top-0 right-0 -mt-1 -mr-1 flex h-3 w-3">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+    </span>
+  </div>
+  <button onClick={toggleDarkMode} className="cursor-pointer px-4">
+    {isDarkMode ? (
+      <RiMoonClearFill className="h-6 w-6 text-blue-400" />
+    ) : (
+      <SunIcon className="h-6 w-6 text-black" />
+    )}
+  </button>
+</div>
+
         <div className="md:hidden flex items-center">
           <button onClick={toggleDarkMode} className="cursor-pointer px-4">
             {isDarkMode ? (
@@ -84,25 +101,25 @@ export const NavBar = () => {
           <button onClick={toggleMenu} className="self-end text-3xl mb-4">
             <HiX />
           </button>
-            <ul className="flex flex-col gap-4 font-semibold">
-              {navBarlinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.link}
-                  smooth={true}
-                  duration={500}
-                  className="cursor-pointer hover:text-gray-600"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </ul>
-            <button className="bg-pink-800 hover:bg-pink-900 text-white px-4 py-2 rounded-md mt-4 w-[30%]">
-              Portfolio
-            </button>
-          </div>
+          <ul className="flex flex-col gap-4 font-semibold">
+            {navBarlinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.link}
+                smooth={true}
+                duration={500}
+                className="cursor-pointer hover:text-gray-600"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </ul>
+          <Button text="Portfolio" additionalClasses="mt-4 w-[30%] px-4 py-2" onClick={handleDownloadCV} />
+        </div>
       )}
     </>
   );
 };
+
+export default NavBar;

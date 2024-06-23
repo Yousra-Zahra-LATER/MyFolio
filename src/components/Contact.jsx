@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import { Element } from "react-scroll";
+import Button from "../constant/Button";
 
 export default function Contact() {
   return (
@@ -110,9 +111,8 @@ export default function Contact() {
                   className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
-              <button className="text-white lg:mx-2 w-full lg:w-[92%] bg-pink-800 border-0 py-2 px-6 focus:outline-none hover:bg-pink-900 rounded-md text-lg">
-                Send Message
-              </button>
+              
+              <Button text="Send Message" additionalClasses="lg:mx-2 w-full lg:w-[92%] py-2 px-6" />
             </div>
           </div>
         </div>

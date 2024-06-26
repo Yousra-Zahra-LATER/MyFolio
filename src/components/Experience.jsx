@@ -12,19 +12,85 @@ import { motion } from "framer-motion";
 import { BriefcaseIcon, CalendarIcon } from "@heroicons/react/24/solid";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
+  SiTailwindcss,
   SiVisualstudiocode,
   SiTypescript,
-  SiMysql,
-  SiMongodb,
-  SiReact,
-  SiAngular,
-  SiGit,
+  SiNextdotjs,
+  SiFigma,
+  SiAstro,
+  SiSvelte,
+  SiMui,
 } from "react-icons/si";
 import cn from "classnames";
+const logoCls =
+  "opacity-60 transition duration-300 hover:!opacity-100 group-hover:opacity-30";
+
+const ICONS = [
+  {
+    label: "Visual Studio Code",
+    icon: SiVisualstudiocode,
+    href: "https://code.visualstudio.com",
+    classes: "hover:-rotate-6 hover:text-[#20A6F2] ",
+  },
+  {
+    label: "TypeScript",
+    icon: SiTypescript,
+    href: "https://typescriptlang.org",
+    classes: "hover:?scale-110 hover:text-[#3078C6]",
+  },
+  {
+    label: "Next.js",
+    icon: SiNextdotjs,
+    href: "https://nextjs.org",
+    classes: "hover:?scale-110",
+  },
+  {
+    label: "Material UI",
+    icon: SiMui,
+    href: "https://mui.com",
+    classes: "hover:?scale-110 hover:text-[#3499FE]",
+  },
+  {
+    label: "React",
+    icon: FaReact,
+    href: "https://react.dev",
+    classes: "duration-700 hover:rotate-180 hover:text-[#58C4DC]",
+  },
+  {
+    label: "Astro",
+    icon: SiAstro,
+    href: "https://astro.build",
+    classes: "hover:?scale-110",
+  },
+  {
+    label: "Tailwind CSS",
+    icon: SiTailwindcss,
+    href: "https://tailwindcss.com",
+    classes: "hover:rotate-12 hover:text-[#38BDF9]",
+  },
+  {
+    label: "Svelte",
+    icon: SiSvelte,
+    href: "https://svelte.dev",
+    classes: "hover:?scale-110 hover:text-[#FF3E00]",
+  },
+  {
+    label: "Node.js",
+    icon: FaNodeJs,
+    href: "https://nodejs.org",
+    classes: "hover:?scale-110 duration-200 hover:text-[#5FA04F]",
+  },
+  {
+    label: "Figma",
+    icon: SiFigma,
+    href: "https://figma.com",
+    classes: cn(logoCls, "hover:?scale-105 duration-200 hover:text-[#FF7262]"),
+  },
+];
 const Experience = () => {
   const [activeTab, setActiveTab] = useState("tab1");
-
   const handleTabChange = (newValue) => {
     setActiveTab(newValue);
   };
@@ -35,81 +101,15 @@ const Experience = () => {
     });
   }, []);
 
-  const logoCls =
-    "opacity-60 transition duration-300 hover:!opacity-100 group-hover:opacity-30";
+  const marquee = ICONS.map(({ label, href, classes, icon: Icon }, i) => (
+    <Icon
+      className={cn(
+        "h-16 w-auto opacity-70 hover:!opacity-100 group-hover:opacity-40  ",
+        classes
+      )}
+    />
+  ));
 
-  const ListData = [
-    {
-      category: "Programming Languages",
-      items: [
-        {
-          label: "Visual Studio Code",
-          icon: SiVisualstudiocode,
-          classes: "hover:-rotate-6 hover:text-blue-500",
-        },
-        {
-          label: "TypeScript",
-          icon: SiTypescript,
-          classes: "hover:-rotate-6 hover:text-blue-500",
-        },
-        {
-          label: "Visual Studio Code",
-          icon: SiVisualstudiocode,
-          classes: "hover:-rotate-6 hover:text-blue-500",
-        },
-        {
-          label: "TypeScript",
-          icon: SiTypescript,
-          classes: cn(logoCls, "hover:-rotate-6 hover:text-blue-500"),
-        },
-      ],
-    },
-    {
-      category: "Database Management",
-      items: [
-        {
-          label: "MySQL",
-          icon: SiMysql,
-          classes: "hover:-rotate-6 ",
-        },
-        {
-          label: "MongoDB",
-          icon: SiMongodb,
-          classes: "hover:scale-110 hover:text-[#3078C6]",
-        },
-      ],
-    },
-    {
-      category: "Frameworks",
-      items: [
-        {
-          label: "React",
-          icon: SiReact,
-          classes: "hover:-rotate-6 hover:text-[#20A6F2]",
-        },
-        {
-          label: "Angular",
-          icon: SiAngular,
-          classes: "hover:scale-110 hover:text-[#3078C6]",
-        },
-      ],
-    },
-    {
-      category: "Tools",
-      items: [
-        {
-          label: "Visual Studio Code",
-          icon: SiVisualstudiocode,
-          classes: "hover:-rotate-6 hover:text-[#20A6F2]",
-        },
-        {
-          label: "Git",
-          icon: SiGit,
-          classes: "hover:scale-110 hover:text-[#3078C6]",
-        },
-      ],
-    },
-  ];
   return (
     <>
       <Element
@@ -123,10 +123,10 @@ const Experience = () => {
             defaultValue="tab1"
             className="flex flex-col h-full gap-10 p-0.5  "
           >
-            <TabsList className="lg:w-[55%] md:w-[75%] w-[87%] mx-auto flex gap-3 justify-center h-14 bg-purple-100 rounded-md p-2">
+            <TabsList className="lg:w-[40%] md:w-[55%] w-[80%] mx-auto flex gap-3 justify-center h-14 bg-purple-100 rounded-md p-2">
               <TabsTrigger
                 value="tab1"
-                className={`rounded my-1  w-[30%] flex items-center justify-center text-center ${
+                className={`rounded my-1  w-[35%] flex items-center justify-center text-center ${
                   activeTab === "tab1" ? "bg-pink-900 text-white" : "text-black"
                 }`}
                 onClick={() => handleTabChange("tab1")}
@@ -136,7 +136,7 @@ const Experience = () => {
               </TabsTrigger>
               <TabsTrigger
                 value="tab2"
-                className={`rounded my-1  w-[30%] flex items-center justify-center text-center ${
+                className={`rounded my-1  w-[35%] flex items-center justify-center text-center ${
                   activeTab === "tab2" ? "bg-pink-900 text-white" : "text-black"
                 }`}
                 onClick={() => handleTabChange("tab2")}
@@ -144,16 +144,7 @@ const Experience = () => {
                 <FontAwesomeIcon icon={faGraduationCap} className="mr-2" />
                 Education
               </TabsTrigger>
-              <TabsTrigger
-                value="tab3"
-                className={`rounded my-1 w-[30%] flex items-center justify-center text-center ${
-                  activeTab === "tab3" ? "bg-pink-900 text-white" : "text-black"
-                }`}
-                onClick={() => handleTabChange("tab3")}
-              >
-                <FontAwesomeIcon icon={faTools} className="mr-2" />
-                Skills
-              </TabsTrigger>
+              
             </TabsList>
 
             <TabsContent value="tab1">
@@ -371,33 +362,7 @@ const Experience = () => {
                 </div>
               </div>
             </TabsContent>
-
-            <TabsContent
-              value="tab3"
-              className="flex md:flex-row justify-center flex-wrap md:gap-12 gap-5"
-            >
-              {ListData.map((category, index) => (
-                <div key={index} className="text-center mb-5">
-                  <h4 className="text-lg font-semibold mb-2 text-nowrap">
-                    {category.category}
-                  </h4>
-                  <div className="border-b-2 bg-pink-100 mb-4"></div>
-                  <div className="grid grid-cols-2 gap-4 w-48 mx-auto">
-                    {category.items.map((item, idx) => (
-                      <div key={idx} className="flex justify-center ">
-                        <item.icon
-                          className={cn(
-                            "aspect-square h-12 w-auto opacity-60 transition duration-300 ",
-                            item.classes
-                          )}
-                          title={item.label}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </TabsContent>
+          
           </Tabs>
         </div>
       </Element>

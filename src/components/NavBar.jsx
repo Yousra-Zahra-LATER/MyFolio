@@ -23,7 +23,7 @@ export const NavBar = () => {
   const navBarlinks = [
     { name: "Home", link: "home" },
     { name: "Experience", link: "experience" },
-    { name: "Projects", link: "projects" },
+    { name: "Projects", link: "project" },
     { name: "Contact", link: "contact" },
   ];
 
@@ -63,7 +63,7 @@ export const NavBar = () => {
         </div>
         <div className="hidden md:flex items-center space-x-4">
   <div className="relative">
-  <button className="bg-custom-pink border  border-pink-900 hover:bg-pink-900 hover:text-white text-black font-semibold px-4 py-2 rounded-md">
+  <button className="bg-custom-pink border  border-pink-900 hover:bg-pink-800 hover:text-white text-black font-semibold px-4 py-2 rounded-md">
   Portfolio
 </button>
   
@@ -97,7 +97,7 @@ export const NavBar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-[52%] bg-pink-100 shadow-lg z-50 p-6 flex flex-col ">
+        <div className="md:hidden fixed top-0 left-0 w-full h-max bg-pink-100 shadow-lg z-50 p-6 flex flex-col ">
           <button onClick={toggleMenu} className="self-end text-3xl mb-4">
             <HiX />
           </button>
@@ -115,7 +115,7 @@ export const NavBar = () => {
               </Link>
             ))}
           </ul>
-          <Button text="Portfolio" additionalClasses="mt-4 w-[30%] px-4 py-2" onClick={handleDownloadCV} />
+          <Button text="Portfolio" additionalClasses="mt-4 w-max px-4 py-2" onClick={handleDownloadCV} />
         </div>
       )}
     </>

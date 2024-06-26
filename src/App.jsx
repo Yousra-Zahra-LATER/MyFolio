@@ -2,15 +2,18 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
 import { NavBar } from "./components/NavBar";
 import MouseParticles from "react-mouse-particles";
+import Project from "./components/Project";
+import Technologies from "./components/InfiniteScroll";
 function App() {
   return (
     <>
       <NavBar/> 
       <About/>
       <Experience/> 
+      <Technologies/> 
+      <Project/> 
       <Contact />
       <Footer />
       <MouseParticles

@@ -3,11 +3,22 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      
       fontFamily: {
         signature: ["Great Vibes"],
         default: ["Poppins", "sans-serif"],
         display: ["Krona One", "sans-serif"],
       },
+      keyframes: {
+        scroll: {
+            from: { transform: 'translateX(0)' },
+            to: {
+                transform: 'translateX(calc(-100% - var(--gap)))',
+            },
+        }
+      },
+      animation: {
+        scroll: '20s scroll linear infinite'},
       colors: {
         "custom-pink": "#FFFBFD",
         primary: {

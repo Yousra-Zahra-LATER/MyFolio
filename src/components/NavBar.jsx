@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GiButterflyFlower } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -9,8 +9,19 @@ import Button from "../constant/Button";
 import CV from "../assets/CV.pdf"; // Import the PDF file
 
 export const NavBar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -37,8 +48,8 @@ export const NavBar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="flex justify-between items-center w-11/12 mx-auto py-4 ">
-        <div className="flex items-center font-signature text-5xl hover:-rotate-6">
+      <nav className="flex justify-between items-center w-11/12 mx-auto py-4 bg-custom-pink dark:bg-gray-700 dark:text-white transition-colors duration-300">
+        <div className="flex items-center font-signature text-5xl hover:-rotate-6 transition-transform duration-300">
           Z
           <motion.div
             initial={{ scale: 0 }}
@@ -55,15 +66,15 @@ export const NavBar = () => {
               to={link.link}
               smooth={true}
               duration={1000}
-              className="cursor-pointer hover:text-gray-600"
+              className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
             >
               {link.name}
             </Link>
           ))}
         </div>
         <div className="hidden md:flex items-center space-x-4">
-  <div className="relative">
-  <button className="bg-custom-pink border  border-pink-900 hover:bg-pink-800 hover:text-white text-black font-semibold px-4 py-2 rounded-md">
+        <div className="relative">
+  <button onClick={handleDownloadCV} className="bg-custom-pink border  border-pink-900 hover:bg-pink-800 hover:text-white text-black font-semibold px-4 py-2 rounded-md transition-colors duration-300 dark:bg-pink-700 dark:border-pink-900 dark:text-white dark:hover:bg-pink-600">
   Portfolio
 </button>
   
@@ -72,22 +83,14 @@ export const NavBar = () => {
       <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
     </span>
   </div>
-  <button onClick={toggleDarkMode} className="cursor-pointer px-4">
-    {isDarkMode ? (
-      <RiMoonClearFill className="h-6 w-6 text-blue-400" />
-    ) : (
-      <SunIcon className="h-6 w-6 text-black" />
-    )}
-  </button>
-</div>
+          <button onClick={toggleDarkMode} className="cursor-pointer px-4 transition-colors duration-300">
+            {isDarkMode ? <SunIcon className="h-6 w-6 text-white" /> : <RiMoonClearFill className="h-6 w-6 text-black" />}
+          </button>
+        </div>
 
         <div className="md:hidden flex items-center">
-          <button onClick={toggleDarkMode} className="cursor-pointer px-4">
-            {isDarkMode ? (
-              <RiMoonClearFill className="h-6 w-6 text-blue-400" />
-            ) : (
-              <SunIcon className="h-6 w-6 text-black" />
-            )}
+          <button onClick={toggleDarkMode} className="cursor-pointer px-4 transition-colors duration-300">
+            {isDarkMode ? <SunIcon className="h-6 w-6 text-white" /> : <RiMoonClearFill className="h-6 w-6 text-black" />}
           </button>
           <button onClick={toggleMenu} className="text-3xl">
             {menuOpen ? <HiX /> : <HiMenu />}
@@ -97,7 +100,7 @@ export const NavBar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-max bg-pink-100 shadow-lg z-50 p-6 flex flex-col ">
+        <div className="md:hidden fixed top-0 left-0 w-full h-max bg-pink-100 dark:bg-gray-800 shadow-lg z-50 p-6 flex flex-col">
           <button onClick={toggleMenu} className="self-end text-3xl mb-4">
             <HiX />
           </button>
@@ -108,14 +111,14 @@ export const NavBar = () => {
                 to={link.link}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-gray-600"
+                className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
           </ul>
-          <Button text="Portfolio" additionalClasses="mt-4 w-max px-4 py-2" onClick={handleDownloadCV} />
+          <Button text="Portfolio" additionalClasses="mt-4 w-max px-4 py-2 bg-custom-pink border border-pink-900 hover:bg-pink-800 hover:text-white text-black font-semibold rounded-md transition-colors duration-300 dark:bg-pink-700 dark:border-pink-900 dark:text-white dark:hover:bg-pink-600" onClick={handleDownloadCV} />
         </div>
       )}
     </>

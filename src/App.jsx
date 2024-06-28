@@ -7,6 +7,7 @@ import MouseParticles from "react-mouse-particles";
 import Project from "./components/Project";
 import Technologies from "./components/InfiniteScroll";
 function App() {
+  
   return (
     <>
       <NavBar/> 

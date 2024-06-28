@@ -4,6 +4,11 @@
 @tailwind utilities;
 
 
+@layer utilities{
+  .paused{
+   animation-play-state: paused;
+  }
+}
 /* Styles globaux pour la scrollbar */
 body::-webkit-scrollbar {
   width: 8px;
@@ -76,5 +81,5 @@ body::-webkit-scrollbar-track {
 @layer base {}
 
 body {
-  @apply bg-custom-pink;
+  @apply bg-custom-pink dark:bg-gray-700 transition-colors duration-300;
 }

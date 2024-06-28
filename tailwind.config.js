@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: 'class', // Ajout du mode sombre ici
   theme: {
     extend: {
-      
+      backgroundImage: {
+        'custom-image': "url('/src/assets/53.PNG')",
+      },
       fontFamily: {
         signature: ["Great Vibes"],
         default: ["Poppins", "sans-serif"],
@@ -11,14 +14,15 @@ export default {
       },
       keyframes: {
         scroll: {
-            from: { transform: 'translateX(0)' },
-            to: {
-                transform: 'translateX(calc(-100% - var(--gap)))',
-            },
+          from: { transform: 'translateX(0)' },
+          to: {
+            transform: 'translateX(calc(-100% - var(--gap)))',
+          },
         }
       },
       animation: {
-        scroll: '20s scroll linear infinite'},
+        scroll: '20s scroll linear infinite'
+      },
       colors: {
         "custom-pink": "#FFFBFD",
         primary: {
@@ -45,10 +49,8 @@ export default {
           700: "#1A0080",
           800: "#0C003D",
         },
-       
       },
     },
   },
-  
   plugins: [],
 };

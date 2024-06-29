@@ -48,8 +48,8 @@ export const NavBar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="flex justify-between items-center w-11/12 mx-auto py-4 bg-custom-pink dark:bg-gray-700 dark:text-white transition-colors duration-300">
-        <div className="flex items-center font-signature text-5xl hover:-rotate-6 transition-transform duration-300">
+      <nav className="flex justify-between items-center w-11/12  mx-auto py-4 bg-custom-pink dark:bg-gray-900 dark:text-white  ">
+        <div className="flex items-center font-signature text-5xl hover:-rotate-6 ">
           Z
           <motion.div
             initial={{ scale: 0 }}
@@ -66,7 +66,7 @@ export const NavBar = () => {
               to={link.link}
               smooth={true}
               duration={1000}
-              className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+              className="cursor-pointer hover:text-gray-600 dark:hover:text-pink-300 "
             >
               {link.name}
             </Link>
@@ -74,22 +74,22 @@ export const NavBar = () => {
         </div>
         <div className="hidden md:flex items-center space-x-4">
         <div className="relative">
-  <button onClick={handleDownloadCV} className="bg-custom-pink border  border-pink-900 hover:bg-pink-800 hover:text-white text-black font-semibold px-4 py-2 rounded-md transition-colors duration-300 dark:bg-pink-700 dark:border-pink-900 dark:text-white dark:hover:bg-pink-600">
+  <button onClick={handleDownloadCV} className="bg-custom-pink border  border-pink-900 hover:bg-pink-800 hover:text-white text-black font-semibold px-4 py-2 rounded-md  dark:bg-pink-700 dark:border-pink-900 dark:text-white dark:hover:bg-pink-800">
   Portfolio
 </button>
   
     <span className="absolute top-0 right-0 -mt-1 -mr-1 flex h-3 w-3">
       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-      <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+      <span className="relative inline-flex rounded-full h-3 w-3 dark:bg-pink-200 bg-pink-700"></span>
     </span>
   </div>
-          <button onClick={toggleDarkMode} className="cursor-pointer px-4 transition-colors duration-300">
+          <button onClick={toggleDarkMode} className="cursor-pointer px-4 ">
             {isDarkMode ? <SunIcon className="h-6 w-6 text-white" /> : <RiMoonClearFill className="h-6 w-6 text-black" />}
           </button>
         </div>
 
         <div className="md:hidden flex items-center">
-          <button onClick={toggleDarkMode} className="cursor-pointer px-4 transition-colors duration-300">
+          <button onClick={toggleDarkMode} className="cursor-pointer px-4 ">
             {isDarkMode ? <SunIcon className="h-6 w-6 text-white" /> : <RiMoonClearFill className="h-6 w-6 text-black" />}
           </button>
           <button onClick={toggleMenu} className="text-3xl">
@@ -111,14 +111,14 @@ export const NavBar = () => {
                 to={link.link}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+                className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 "
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
           </ul>
-          <Button text="Portfolio" additionalClasses="mt-4 w-max px-4 py-2 bg-custom-pink border border-pink-900 hover:bg-pink-800 hover:text-white text-black font-semibold rounded-md transition-colors duration-300 dark:bg-pink-700 dark:border-pink-900 dark:text-white dark:hover:bg-pink-600" onClick={handleDownloadCV} />
+          <Button text="Portfolio" additionalClasses="mt-4 w-max px-4 py-2 bg-custom-pink border border-pink-900 hover:bg-pink-800 hover:text-white text-black font-semibold rounded-md  dark:bg-pink-700 dark:border-pink-900 dark:text-white dark:hover:bg-pink-600" onClick={handleDownloadCV} />
         </div>
       )}
     </>

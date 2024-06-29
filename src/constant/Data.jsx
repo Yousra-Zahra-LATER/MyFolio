@@ -98,7 +98,7 @@ export const ICONS = [
     },
     {
       icon: LuBrainCircuit,
-      label: "Brain Circuit",
+      label: "Deep Learning",
       classes: "hover:-translate-y-2 duration-200 hover:text-[#FF6F61] ",
     },
   ];
@@ -111,3 +111,53 @@ export const ICONS = [
   applications that ensure seamless integration across the stack.
   Explore my portfolio to see my innovative projects and discover
   how my skills can add value to your team.`;
+
+  export const experienceData = [
+    {
+      role: 'IT Operations Engineer',
+      period: 'January, 2024 - PRESENT',
+      company: 'Algeria Telecom',
+      duties: [
+        'Developed web applications using JavaScript, React, Tailwind, and NextJS.',
+        'Created and developed websites, landing pages, and email templates using HubSpot CMS that are easy for clients to edit and optimized for different devices',
+        "Assisted in the maintenance and troubleshooting of client's websites to ensure smooth performance and user satisfaction."
+      ],
+    },
+    {
+      role: 'FULL STACK Developer',
+      period: 'July, 2024 - PRESENT',
+      company: 'FREELANCE',
+      duties: [
+        'Developed and implemented CMS websites utilizing the HubSpot platform, resulting in an efficient and user-friendly experience for clients',
+        'Successfully resolved various technical issues for clients, contributing to a positive and productive project experience',
+        'Achieved the top-rated badge on Upwork within four months of starting as a freelancer, demonstrating exceptional performance and customer satisfaction in delivering high-quality front-end development services.'
+      ],
+    },
+  ];
+
+ export const educationData = [
+    {
+      degree: 'Master Degree',
+      period: '2020 - 2022',
+      field: 'Software Engineer',
+      university: 'Abdelhamid Mehri University - Constantine - Algeria',
+      direction: '',
+      bgColor: 'bg-pink-100',
+    },
+    {
+      degree: 'Licence Degree',
+      period: '2017 - 2020',
+      field: 'Software Engineer',
+      university: 'Abdelhamid Mehri University - Constantine - Algeria',
+      direction: 'reverse',
+      bgColor: 'bg-pink-200',
+    },
+    {
+      degree: 'Baccalaureat',
+      period: '2016 - 2017',
+      field: 'Science Experimentale',
+      university: 'Malek Hadded Lycee - Constantine - Algeria',
+      direction: '',
+      bgColor: 'bg-purple-200',
+    },
+  ];

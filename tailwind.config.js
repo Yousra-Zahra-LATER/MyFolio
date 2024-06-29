@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  options: {
+    safelist: ['bg-custom-image'], // Ajoutez bg-custom-image à la liste sûre si nécessaire
+  },
   darkMode: 'class', // Ajout du mode sombre ici
   theme: {
     extend: {
       backgroundImage: {
-        'custom-image': "url('/src/assets/53.PNG')",
+        'custom-about': "url('/src/assets/53.PNG')",
+        'custom-contact': "url('/src/assets/2.PNG')",
       },
       fontFamily: {
         signature: ["Great Vibes"],

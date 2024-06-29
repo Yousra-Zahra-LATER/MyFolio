@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { m, motion, LazyMotion, domAnimation } from "framer-motion";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import FixedDiv from "./FixedDiv";
+import FixedDiv from "../constant/FixedDiv";
 import githubIcon from "../assets/github.svg";
 import emailIcon from "../assets/email.svg";
 import linkedinIcon from "../assets/linkedin.svg";
@@ -33,17 +33,18 @@ const About = () => {
   return (
     <Element
       name="home"
-      className="w-full flex justify-center min-h-screen bg-custom-pink dark:bg-gray-700  transition-colors duration-300">
-      <div className="md:w-[86%] w-11/12 flex md:flex-row gap-5 items-center flex-col-reverse">
-        <div className="md:w-[50%] flex flex-col lg:gap-7 md:gap-3.5 gap-6">
+      className=" bg-custom-about bg-center bg-cover  ">
+    <div className="  w-full flex justify-center min-h-screen dark:bg-gradient-to-b from-gray-900 to-gray-700  ">
+      <div className="md:w-[86%] w-11/12 flex md:flex-row gap-5 items-center flex-col-reverse ">
+        <div className="md:w-[50%] flex flex-col lg:gap-7 md:gap-3.5 gap-6 ">
           <motion.div
             viewport={{ once: true }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: "linear", duration: 2.0 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center "
           >
-            <div className="self-start md:mb-1 text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
+            <div className="self-start md:mb-1 text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white ">
               Hello there, I am
             </div>
             <h4 className="right-7 lg:right-8 lg:text-7xl md:text-6xl text-7xl font-bold whitespace-nowrap text-black relative dark:text-pink-100">
@@ -56,7 +57,7 @@ const About = () => {
 
           <LazyMotion features={domAnimation} strict>
             <m.p
-              className="text-center font-bold mt-3 text-black dark:text-pink-300"
+              className="text-center font-bold mt-3 text-black dark:text-pink-300 " 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{
@@ -69,7 +70,7 @@ const About = () => {
               I'm so happy you are here :)
             </m.p>
             <m.p
-              className="text-center text-black dark:text-white"
+              className="text-center text-black dark:text-white "
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{
@@ -82,7 +83,7 @@ const About = () => {
              {ABOUT_TEXT}
             </m.p>
             <m.p
-              className="text-center font-bold text-black dark:text-pink-300"
+              className="text-center font-bold text-black dark:text-pink-300 "
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{
@@ -123,7 +124,7 @@ const About = () => {
                       rel="noopener noreferrer"
                     >
                       <img
-                        className="h-13 w-13 p-4 transition-all dark:invert"
+                        className="h-13 w-13 p-4 transition-all dark:invert "
                         src={social.logo}
                         alt={social.alt}
                       />
@@ -139,7 +140,7 @@ const About = () => {
                 duration={800}
                 className="w-[40%]"
               >
-                <Button text="Hire me" additionalClasses="py-2 w-full" />
+                <Button text="Hire me" additionalClasses="py-2 w-full " />
               </Link>
             </div>
             <FontAwesomeIcon
@@ -164,6 +165,7 @@ const About = () => {
             <img src="/src/assets/moi8.png" alt="Profile" />
           </m.div>
         </LazyMotion>
+      </div>
       </div>
       <FixedDiv show={true} />
     </Element>

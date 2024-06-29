@@ -27,7 +27,7 @@ const FixedDiv = ({ show }) => {
   if (!show) return null;
 
   return (
-    <div className="hidden md:flex fixed top-[50%] -left-3 transform -translate-y-1/2 flex-col ">
+    <div className="hidden md:flex fixed top-[50%] -left-3 transform -translate-y-1/2 flex-col dark:invert">
       <ul className="flex flex-row justify-center items-center w-full gap-3 md:flex-col">
         {socials.map((social, index) => (
           <motion.li

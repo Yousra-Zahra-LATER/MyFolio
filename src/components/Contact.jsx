@@ -1,25 +1,20 @@
 import React from "react";
-import SectionTitle from "../components/SectionTitle";
+import SectionTitle from "../constant/SectionTitle";
 import { Element } from "react-scroll";
 import Button from "../constant/Button";
 
 export default function Contact() {
   return (
     <Element
-        name="contact"
-      className="w-full flex justify-center min-h-screen dark:bg-gray-800"
-      style={{
-        backgroundImage: "url('/src/assets/2.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    name="contact"
+    className=" bg-custom-contact bg-center bg-cover">
+    <div className="dark:bg-gray-700 w-full flex justify-center min-h-screen dark:bg-gradient-to-b from-gray-700 to-gray-900">
       <div className="md:w-[86%] w-[90%]  sm:h-max  flex flex-col gap-6">
         <SectionTitle title="CONTACT ME" subtitle="GET IN TOUCH" />
         <div className="h-auto flex md:flex-nowrap flex-wrap gap-6">
           {/* First child */}
           <div className="w-full flex flex-col p-1">
-            <h2 className="text-gray-900 text-2xl mb-3 font-medium text-center">
+            <h2 className="text-gray-900 text-2xl mb-3 font-medium text-center dark:text-gray-200 opacity-80">
               Where you can find me
             </h2>
             <div className="h-full bg-gray-300 overflow-hidden p-10 flex items-end justify-start relative">
@@ -57,10 +52,10 @@ export default function Contact() {
           </div>
           {/* Second child */}
           <div className="w-full flex flex-col p-1">
-            <h2 className="text-gray-900 text-2xl mb-3 font-medium text-center">
+            <h2 className="text-gray-900 text-2xl mb-3 font-medium text-center dark:text-gray-200 opacity-80">
               Feel free to ask anything
             </h2>
-            <p className="w-full leading-relaxed mb-5 text-gray-600 text-center">
+            <p className="w-full leading-relaxed mb-5 text-gray-600 dark:text-white text-center">
               I am looking for a new role and would appreciate your support.
               <br />
               Thank you in advance for any connections, advice, or opportunities
@@ -70,7 +65,7 @@ export default function Contact() {
               <div className="mb-4 lg:mx-2 lg:w-[92%]">
                 <label
                   htmlFor="name"
-                  className="leading-7 text-sm text-gray-600 block mb-2"
+                  className="leading-7 text-sm text-gray-600 block mb-2 dark:text-gray-300"
                 >
                   Name
                 </label>
@@ -85,7 +80,7 @@ export default function Contact() {
               <div className="mb-4 lg:mx-2 lg:w-[92%]">
                 <label
                   htmlFor="email"
-                  className="leading-7 text-sm text-gray-600 block mb-2"
+                  className="leading-7 text-sm text-gray-600 block mb-2 dark:text-gray-300"
                 >
                   Email
                 </label>
@@ -100,7 +95,7 @@ export default function Contact() {
               <div className="mb-4 lg:mx-2 lg:w-[92%]">
                 <label
                   htmlFor="message"
-                  className="leading-7 text-sm text-gray-600 block mb-2"
+                  className="leading-7 text-sm text-gray-600 block mb-2 dark:text-gray-300"
                 >
                   Message
                 </label>
@@ -112,10 +107,11 @@ export default function Contact() {
                 ></textarea>
               </div>
               
-              <Button text="Send Message" additionalClasses="lg:mx-2 w-full lg:w-[92%] py-2 px-6" />
+              <Button text="Send Message" additionalClasses="lg:mx-2 w-full lg:w-[92%] py-2 px-6 mb-5" />
             </div>
           </div>
         </div>
+      </div>
       </div>
     </Element>
   );

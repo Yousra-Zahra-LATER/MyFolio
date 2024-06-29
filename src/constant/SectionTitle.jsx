@@ -9,10 +9,10 @@ const SectionTitle = (props) => {
       initial={{ x: -350 }}
       whileInView={{ x: 0 }}
       transition={{ duration: 0.6, type: "spring" }}
-      className="text-black p-4 noselect"
+      className="text-black dark:text-white p-4 noselect"
     >
       <span
-        className="opacity-50 "
+        className="opacity-60 "
         style={{
           textTransform: "uppercase",
           fontFamily: "Poppins, sans-serif",

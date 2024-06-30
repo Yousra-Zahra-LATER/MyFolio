@@ -21,8 +21,7 @@ const Experience = () => {
   };
   useEffect(() => {
     AOS.init({
-      once: false, // Permet de rejouer l'animation chaque fois que l'élément entre en vue
-      mirror: true, // Répéter l'animation lorsque l'élément défile vers le haut
+      once: true, // Permet de ne pas rejouer l'animation une seule fois que l'élément entre en vue
     });
   }, []);
 
@@ -70,7 +69,7 @@ const Experience = () => {
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ once: true }}
-              className="grid grid-cols-1 gap-10 items-center md:grid-cols-2"
+              className="grid grid-cols-1 gap-10 items-center md:grid-cols-2 mb-5"
             >
               {experienceData.map((data, index) => (
                 <Card

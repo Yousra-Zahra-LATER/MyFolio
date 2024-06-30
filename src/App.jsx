@@ -6,11 +6,30 @@ import { NavBar } from "./components/NavBar";
 import MouseParticles from "react-mouse-particles";
 import Project from "./components/Project";
 import Technologies from "./components/InfiniteScroll";
+import { useEffect,useState } from "react";
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
   return (
     <>
-      <NavBar/> 
-      <About/>
+      <div className={isDarkMode ? 'dark' : ''}>
+      <NavBar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <About isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Experience/> 
       <Technologies/> 
       <Project/> 
@@ -22,7 +41,7 @@ function App() {
         cull="MuiSvgIcon-root,MuiButton-root"
         level={6}
       />
-     
+     </div>
     </>
   );
 }

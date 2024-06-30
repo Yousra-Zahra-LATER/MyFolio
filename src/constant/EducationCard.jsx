@@ -8,8 +8,7 @@ const EducationCard = ({ degree, period, field, university, direction, bgColor }
           <div className={`w-full sm:w-1/2 ${direction === 'reverse' ? 'sm:pl-8' : 'sm:pr-8'}`}>
             <div
               data-aos={direction === 'reverse' ? 'fade-left' : 'fade-right'}
-              data-aos-delay="100"
-              data-aos-duration="1200"
+              data-aos-duration="1000"
               className={`${bgColor} p-4 rounded shadow group hover:bg-pink-900 cursor-pointer`}
             >
               <h3 className="text-black font-[600] group-hover:text-white text-xl">

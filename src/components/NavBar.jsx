@@ -8,29 +8,19 @@ import { Link } from "react-scroll";
 import Button from "../constant/Button";
 import CV from "../assets/CV.pdf"; // Import the PDF file
 
-export const NavBar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    const savedMode = localStorage.getItem('darkMode');
-    return savedMode ? JSON.parse(savedMode) : false;
-  });
-  useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+
+  
+export const NavBar = ({ isDarkMode, toggleDarkMode }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleDarkModeToggle = () => {
+    toggleDarkMode();
+  };
   const navBarlinks = [
     { name: "Home", link: "home" },
     { name: "Experience", link: "experience" },
@@ -83,13 +73,13 @@ export const NavBar = () => {
       <span className="relative inline-flex rounded-full h-3 w-3 dark:bg-pink-200 bg-pink-700"></span>
     </span>
   </div>
-          <button onClick={toggleDarkMode} className="cursor-pointer px-4 ">
+          <button onClick={handleDarkModeToggle} className="cursor-pointer px-4 ">
             {isDarkMode ? <SunIcon className="h-6 w-6 text-white" /> : <RiMoonClearFill className="h-6 w-6 text-black" />}
           </button>
         </div>
 
         <div className="md:hidden flex items-center">
-          <button onClick={toggleDarkMode} className="cursor-pointer px-4 ">
+          <button onClick={handleDarkModeToggle} className="cursor-pointer px-4 ">
             {isDarkMode ? <SunIcon className="h-6 w-6 text-white" /> : <RiMoonClearFill className="h-6 w-6 text-black" />}
           </button>
           <button onClick={toggleMenu} className="text-3xl">
@@ -100,7 +90,7 @@ export const NavBar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-max bg-pink-100 dark:bg-gray-800 shadow-lg z-50 p-6 flex flex-col">
+        <div className="md:hidden fixed top-0 left-0 w-full h-max bg-pink-100 dark:bg-gray-500 shadow-lg z-50 p-6 flex flex-col">
           <button onClick={toggleMenu} className="self-end text-3xl mb-4">
             <HiX />
           </button>

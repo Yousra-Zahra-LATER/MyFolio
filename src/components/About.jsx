@@ -30,18 +30,18 @@ const socials = [
 
 const About = ({ isDarkMode, toggleDarkMode }) => {
   // Déterminer l'URL de l'image en fonction de isDarkMode
-  const imageUrl = isDarkMode ? "/src/assets/moi7.png" : "/src/assets/moi8.png";
-  const isMoiImage = imageUrl === "/src/assets/moi7.png";
+  const imageUrl = isDarkMode ? "/src/assets/mee1.png" : "/src/assets/mee.png";
+
   return (
     <Element name="home" className=" bg-custom-about bg-center bg-cover">
-      <div className="w-full flex justify-center min-h-screen dark:bg-gradient-to-b from-gray-900 to-gray-700">
+      <div className="w-full flex justify-center min-h-screen dark:bg-gradient-to-b from-gray-900 to-gray-700 py-1">
       <div className="md:w-[86%] w-11/12 flex md:flex-row gap-5 items-center flex-col-reverse ">
       <div className="md:w-[50%] flex flex-col lg:gap-7 md:gap-3.5 gap-6 ">
             <motion.div
               viewport={{ once: true }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ type: "linear", duration: 2.0 }}
+              transition={{ type: "linear", duration: 2 }}
               className="flex flex-col items-center "
             >
               <div className="self-start md:mb-1 text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white ">
@@ -62,21 +62,21 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
                 transition={{
                   duration: 0.5,
                   type: "spring",
-                  stiffness: 100,
-                  damping: 50,
+                  stiffness: 30,
+                  damping: 30,
                 }}
               >
                 I'm so happy you are here :)
               </m.p>
               <m.p
-                className="text-center text-black dark:text-white "
+                className="text-center text-gray-700 dark:text-white font-semibold"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
                   duration: 0.5,
                   type: "spring",
-                  stiffness: 100,
-                  damping: 50,
+                  stiffness: 15,
+                  damping: 20,
                 }}
               >
                 {ABOUT_TEXT}
@@ -88,8 +88,8 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
                 transition={{
                   duration: 0.5,
                   type: "spring",
-                  stiffness: 100,
-                  damping: 50,
+                  stiffness: 30,
+                  damping: 30,
                 }}
               >
                 Let's connect and create exceptional web experiences together.
@@ -144,23 +144,23 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
               </div>
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="text-2xl animate-bounce text-black dark:text-pink-200"
+                className="text-2xl animate-bounce text-black dark:text-pink-200 pt-2"
               />
             </LazyMotion>
          </div> 
          <LazyMotion features={domAnimation} strict>
             <m.div
-              initial={{ x: 20, opacity: 1 }}
+              initial={{ x: 30, opacity: 1 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{
                 duration: 0.5,
                 type: "spring",
-                stiffness: 90,
-                damping: 10,
+                stiffness: 40,
+                damping: 5,
               }}
-              className="md:w-[50%] flex justify-center "
+              className="md:w-[50%] flex justify-center md:mb-16"
             >
-              <img src={imageUrl} alt="Me" className={isMoiImage ?  '' : ''} />
+              <img src={imageUrl} alt="Me"  />
             </m.div>
           </LazyMotion>
        </div> 

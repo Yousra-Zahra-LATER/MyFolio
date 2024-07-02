@@ -7,10 +7,7 @@ import { RiMoonClearFill } from "react-icons/ri";
 import { Link } from "react-scroll";
 import Button from "../constant/Button";
 import CV from "../assets/CV.pdf"; // Import the PDF file
-
-
-
-  
+ 
 export const NavBar = ({ isDarkMode, toggleDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -38,7 +35,7 @@ export const NavBar = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="flex justify-between items-center w-11/12  mx-auto py-4 bg-custom-pink dark:bg-gray-900 dark:text-white  ">
+      <nav className="flex justify-between items-center  w-11/12  mx-auto py-4 bg-custom-pink dark:bg-gray-900 dark:text-white  ">
         <div className="flex items-center font-signature text-5xl hover:-rotate-6 ">
           Z
           <motion.div
@@ -56,7 +53,7 @@ export const NavBar = ({ isDarkMode, toggleDarkMode }) => {
               to={link.link}
               smooth={true}
               duration={1000}
-              className="cursor-pointer hover:text-gray-600 dark:hover:text-pink-300 "
+              className="cursor-pointer hover:text-gray-600 dark:hover:text-pink-200 "
             >
               {link.name}
             </Link>

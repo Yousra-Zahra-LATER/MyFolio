@@ -13,7 +13,7 @@ export default function Technologies() {
   ));
   return (
     <>
-      <div className="flex flex-col text-center dark:bg-gray-700 gap-6">
+      <div className="flex flex-col text-center dark:bg-gray-700 gap-6 py-5">
         <h1 className="font-semibold text-4xl  dark:text-white">Technologies</h1>
       
         <h2 className="text-gray-900 text-xl mb-3 font-medium text-center dark:text-gray-200 opacity-80">
@@ -22,7 +22,7 @@ export default function Technologies() {
     
             </h2>
         
-        <div className="w-full border-t-2 border-purple-50 "></div>
+        <div className="w-full border-t-2 border-purple-50 dark:opacity-15 "></div>
         <div className="relative overflow-hidden">
   <div className="relative group flex w-4/6 mx-auto shrink-0 gap-[--gap] px-2 py-2 [--gap:2rem] overflow-hidden">
     <div className="flex shrink-0 animate-scroll items-center justify-around gap-[--gap] will-change-[transform,opacity] group-hover:paused">
@@ -48,7 +48,7 @@ export default function Technologies() {
 </div>
 
 
-        <div className="w-full border-t-2 border-purple-50 "></div>
+        <div className="w-full border-t-2 border-purple-50 dark:opacity-15"></div>
       </div>
     </>
   );

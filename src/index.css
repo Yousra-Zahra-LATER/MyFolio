@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* Animation pause pour le composant InfinitScroll */
 @layer utilities{
   .paused{
    animation-play-state: paused;
@@ -27,59 +27,7 @@ body::-webkit-scrollbar-track {
   /* Couleur de la piste de défilement */
 }
 
-.blob {
-  background: #e69c9c;
-  border-radius: 50%;
-  right: 9px;
-  /* Utilisation de left au lieu de right */
-  margin-top: -9px;
-  height: 20px;
-  width: 20px;
-  position: relative;
-  /* Assurez-vous d'ajouter position: relative; */
-
-  box-shadow: 0 0 0 0 rgb(80, 14, 87);
-  transform: scale(1);
-  animation: pulse 0.9s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.45);
-    box-shadow: 0 0 0 0 rgba(220, 198, 240, 0.7);
-  }
-
-  70% {
-    transform: scale(0.5);
-    box-shadow: 0 0 0 10px rgba(116, 18, 69, 0);
-  }
-
-  100% {
-    transform: scale(0.45);
-    box-shadow: 0 0 0 0 rgba(225, 149, 149, 0);
-  }
-}
-
-@keyframes spotlight {
-
-  0%,
-  100% {
-    background-position: 200% center;
-  }
-
-  50% {
-    background-position: 0% center;
-  }
-}
-
-.animate-spotlight {
-  background-size: 200% 200%;
-  animation: spotlight 3s ease-in-out infinite;
-}
-
-
-@layer base {}
-
+/* Couleur du background du body */
 body {
   @apply bg-custom-pink dark:bg-gray-900 ;
 }

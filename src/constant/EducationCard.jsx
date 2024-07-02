@@ -2,8 +2,8 @@ import React from 'react';
 
 const EducationCard = ({ degree, period, field, university, direction, bgColor }) => {
   return (
-    <div className='mt-6 md:mt-0 mb-6'>
-      <div className={`flex items-center flex-col sm:flex-row${direction === 'reverse' ? '-reverse' : ''}`}>
+    <div className='mt-8 mb-6 relative'>
+      <div className={`flex items-center flex-col sm:flex-row ${direction === 'reverse' ? 'sm:flex-row-reverse' : ''}`}>
         <div className={`flex ${direction === 'reverse' ? 'justify-end' : 'justify-start'} w-full mx-auto items-center`}>
           <div className={`w-full sm:w-1/2 ${direction === 'reverse' ? 'sm:pl-8' : 'sm:pr-8'}`}>
             <div
@@ -22,7 +22,7 @@ const EducationCard = ({ degree, period, field, university, direction, bgColor }
             </div>
           </div>
         </div>
-        <div className="rounded-full bg-pink-900 border-custom-pink border-4 w-6 h-6 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0 flex items-center justify-center"></div>
+        <div className="rounded-full bg-pink-900 border-custom-pink border-4 w-6 h-6 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 sm:translate-y-0"></div>
       </div>
     </div>
   );

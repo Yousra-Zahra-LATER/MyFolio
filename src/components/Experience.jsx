@@ -10,10 +10,10 @@ import { Element } from "react-scroll";
 import { motion } from "framer-motion";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import Card from "../constant/Card";
-import { experienceData } from "../constant/Data";
 import EducationCard from "../constant/EducationCard";
+import Card from "../constant/ExperienceCard";
 import { educationData } from "../constant/Data";
+import { experienceData } from "../constant/Data";
 const Experience = () => {
   const [activeTab, setActiveTab] = useState("tab1");
   const handleTabChange = (newValue) => {
@@ -25,13 +25,11 @@ const Experience = () => {
     });
   }, []);
 
- 
-  
   return (
     <>
       <Element
         name="experience"
-        className="w-full flex justify-center min-h-screen dark:bg-gray-700"
+        className="flex justify-center min-h-screen dark:bg-gray-700 py-5"
       >
         <div className="md:w-[86%] w-11/12 flex flex-col gap-6 ">
           <SectionTitle title="MY JOURNEY" subtitle="EXPERIENCE" />
@@ -61,45 +59,46 @@ const Experience = () => {
                 <FontAwesomeIcon icon={faGraduationCap} className="mr-2" />
                 Education
               </TabsTrigger>
-              
             </TabsList>
 
             <TabsContent value="tab1">
-            <motion.div
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 gap-10 items-center md:grid-cols-2 mb-5"
-            >
-              {experienceData.map((data, index) => (
-                <Card
-                  key={index}
-                  role={data.role}
-                  period={data.period}
-                  company={data.company}
-                  duties={data.duties}
-                />
-              ))}
-            </motion.div>
-          </TabsContent>
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true }}
+                className="grid grid-cols-1 gap-10 items-center md:grid-cols-2 mb-5"
+              >
+                {experienceData.map((data, index) => (
+                  <Card
+                    key={index}
+                    role={data.role}
+                    period={data.period}
+                    company={data.company}
+                    duties={data.duties}
+                  />
+                ))}
+              </motion.div>
+            </TabsContent>
 
-          <TabsContent value="tab2" className="lg:w-[65%] md:w-[75%] w-[95%] mx-auto md:mb-0 mb-5">
-            <div className="relative text-gray-700 antialiased font-semibold">
-              <div className="hidden absolute w-1 sm:block bg-pink-900 h-full left-1/2 transform -translate-x-1/2"></div>
-              {educationData.map((data, index) => (
-                <EducationCard
-                  key={index}
-                  degree={data.degree}
-                  period={data.period}
-                  field={data.field}
-                  university={data.university}
-                  direction={data.direction}
-                  bgColor={data.bgColor}
-                />
-              ))}
-            </div>
-          </TabsContent>
-          
+            <TabsContent
+              value="tab2"
+              className="lg:w-[65%] md:w-[75%] w-[95%] mx-auto md:mb-0 mb-5"
+            >
+              <div className="relative text-gray-700 antialiased font-semibold">
+                <div className="hidden absolute w-1 sm:block bg-pink-900 h-full left-1/2 transform -translate-x-1/2"></div>
+                {educationData.map((data, index) => (
+                  <EducationCard
+                    key={index}
+                    degree={data.degree}
+                    period={data.period}
+                    field={data.field}
+                    university={data.university}
+                    direction={data.direction}
+                    bgColor={data.bgColor}
+                  />
+                ))}
+              </div>
+            </TabsContent>
           </Tabs>
         </div>
       </Element>

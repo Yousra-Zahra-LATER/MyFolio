@@ -27,7 +27,7 @@ function App() {
   };
   return (
     <>
-      <div className={isDarkMode ? 'dark' : ''}>
+      <div className={`${isDarkMode ? 'dark' : ''} overflow-hidden`}>
       <NavBar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <About isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Experience/> 

@@ -8,8 +8,8 @@ export default function Contact() {
     <Element
     name="contact"
     className=" bg-custom-contact bg-center bg-cover">
-    <div className="dark:bg-gray-700 w-full flex justify-center min-h-screen dark:bg-gradient-to-b from-gray-700 to-gray-900">
-      <div className="md:w-[86%] w-[90%]  sm:h-max  flex flex-col gap-6">
+    <div className="dark:bg-gray-700 w-full flex justify-center min-h-screen dark:bg-gradient-to-b from-gray-700 to-gray-900 py-5">
+      <div className="md:w-[86%] w-11/12  sm:h-max  flex flex-col gap-6">
         <SectionTitle title="CONTACT ME" subtitle="GET IN TOUCH" />
         <div className="h-auto flex md:flex-nowrap flex-wrap gap-6">
           {/* First child */}
@@ -55,14 +55,14 @@ export default function Contact() {
             <h2 className="text-gray-900 text-2xl mb-3 font-medium text-center dark:text-gray-200 opacity-80">
               Feel free to ask anything
             </h2>
-            <p className="w-full leading-relaxed mb-5 text-gray-600 dark:text-white text-center">
+            <p className="leading-relaxed mb-5 text-gray-600 dark:text-white text-center">
               I am looking for a new role and would appreciate your support.
               <br />
               Thank you in advance for any connections, advice, or opportunities
               you can offer.
             </p>
-            <div className="lg:px-10 px-2">
-              <div className="mb-4 lg:mx-2 lg:w-[92%]">
+            <div className="flex flex-col items-center ">
+              <div className="mb-4 md:w-[82%] w-[85%]">
                 <label
                   htmlFor="name"
                   className="leading-7 text-sm text-gray-600 block mb-2 dark:text-gray-300"
@@ -74,10 +74,10 @@ export default function Contact() {
                   id="name"
                   name="name"
                   placeholder="Enter Your Full Name"
-                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 "
                 />
               </div>
-              <div className="mb-4 lg:mx-2 lg:w-[92%]">
+              <div className="mb-4 md:w-[82%] w-[85%]">
                 <label
                   htmlFor="email"
                   className="leading-7 text-sm text-gray-600 block mb-2 dark:text-gray-300"
@@ -89,10 +89,10 @@ export default function Contact() {
                   id="email"
                   name="email"
                   placeholder="Enter Your Full Email"
-                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 "
                 />
               </div>
-              <div className="mb-4 lg:mx-2 lg:w-[92%]">
+              <div className="mb-4 md:w-[82%] w-[85%]">
                 <label
                   htmlFor="message"
                   className="leading-7 text-sm text-gray-600 block mb-2 dark:text-gray-300"
@@ -103,11 +103,11 @@ export default function Contact() {
                   id="message"
                   name="message"
                   placeholder="Message"
-                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 leading-6 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-white border border-gray-300 focus:border-pink-900 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 leading-6 "
                 ></textarea>
               </div>
               
-              <Button text="Send Message" additionalClasses="lg:mx-2 w-full lg:w-[92%] py-2 px-6 mb-5" />
+              <Button text="Send Message" additionalClasses=" w-4/5  py-2 px-6 mb-5" />
             </div>
           </div>
         </div>

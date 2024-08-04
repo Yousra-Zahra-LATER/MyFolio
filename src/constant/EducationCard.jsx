@@ -2,7 +2,7 @@ import React from 'react';
 
 const EducationCard = ({ degree, period, field, university, direction, bgColor }) => {
   return (
-    <div className='mt-8 mb-6 relative'>
+    <div className=' mb-6 relative'>
       <div className={`flex items-center flex-col sm:flex-row ${direction === 'reverse' ? 'sm:flex-row-reverse' : ''}`}>
         <div className={`flex ${direction === 'reverse' ? 'justify-end' : 'justify-start'} w-full mx-auto items-center`}>
           <div className={`w-full sm:w-1/2 ${direction === 'reverse' ? 'sm:pl-8' : 'sm:pr-8'}`}>

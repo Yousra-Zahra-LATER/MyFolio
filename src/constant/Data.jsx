@@ -12,10 +12,18 @@ import {
   SiOverleaf,
   SiUml,
   SiNodedotjs,
+  SiProxmox ,
+  
 } from "react-icons/si";
+import { DiDjango } from "react-icons/di";
 import { FaJava, FaPython, FaReact } from "react-icons/fa";
 import { LuBrainCircuit } from "react-icons/lu";
 export const ICONS = [
+  {
+    icon: SiProxmox ,
+    label: "Proxmox",
+    classes: "hover:-rotate-90 hover:text-[#DE6C00]",
+  },
   {
     icon: FaJava,
     label: "Java",
@@ -61,26 +69,22 @@ export const ICONS = [
     label: "Oracle",
     classes: "hover:translate-x-1 duration-200 hover:text-[#F80000]",
   },
-  {
-    icon: SiMongodb,
+   /*{
+   icon: SiMongodb,
     label: "MongoDB",
     classes: "hover:rotate-3 duration-200 hover:text-[#4DB33D]",
   },
-  {
+ {
     icon: SiNodedotjs,
     label: "Node.js",
     classes: "hover:rotate-90 duration-200 hover:text-[#68A063]",
-  },
-  {
-    icon: FaReact,
-    label: "React",
-    classes: "hover:rotate-180 duration-200 hover:text-[#61DAFB]",
-  },
-  {
+  },*/
+
+ /* {
     icon: SiExpress,
     label: "Express.js",
     classes: "hover:-translate-y-2 duration-200 hover:text-[#000000]",
-  },
+  },*/
   {
     icon: SiVisualstudiocode,
     label: "Visual Studio Code",
@@ -100,6 +104,16 @@ export const ICONS = [
     icon: LuBrainCircuit,
     label: "Deep Learning",
     classes: "hover:-translate-y-2 duration-200 hover:text-[#FF6F61] ",
+  },
+  {
+    icon: DiDjango,
+    label: "Django",
+    classes: "hover:translate-x-2 duration-200 hover:text-[#092D1F] ",
+  },
+  {
+    icon: FaReact,
+    label: "React",
+    classes: "hover:rotate-180 duration-200 hover:text-[#61DAFB]",
   },
 ];
 
@@ -136,7 +150,7 @@ export const projects = [
         classe: "hover:text-[#61DAFB] dark:hover:text-[#6777FB]",
       },
     ],
-    imageUrl: "/src/assets/22.png",
+    imageUrl: "/src/assets/deepLearning.png",
     link: "lien_vers_votre_projet_1",
   },
   {
@@ -155,7 +169,7 @@ export const projects = [
     link: "lien_vers_votre_projet_1",
   },
 ];
-export const ABOUT_TEXT = `I'm a dedicated software engineer with a strong 
+export const ABOUT_TEXT = `I'm a edicated software engineer with a strong 
 focus on full-stack development and over a year of experience. I specialize 
 in creating beautiful, responsive, and user-friendly websites. Always seeking
  new challenges and opportunities to grow my skills, I invite you to explore 

@@ -28,7 +28,7 @@ export default {
         scroll: '20s scroll linear infinite'
       },
       colors: {
-        "custom-pink": "#FFFBFD",
+        "custom-pink": "#FCFFFC",
         primary: {
           DEFAULT: "#222831",
           50: "#E7EAEE",

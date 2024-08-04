@@ -149,6 +149,7 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
             </LazyMotion>
          </div> 
          <LazyMotion features={domAnimation} strict>
+         
             <m.div
               initial={{ x: 30, opacity: 1 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -160,7 +161,8 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
               }}
               className="md:w-[50%] flex justify-center md:mb-16"
             >
-              <img src={imageUrl} alt="Me"  />
+           
+             <img src={imageUrl} alt="Me" className="rounded-t-full" />
             </m.div>
           </LazyMotion>
        </div> 

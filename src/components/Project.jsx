@@ -1,7 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
 import SectionTitle from "../constant/SectionTitle";
-// Exemple d'icône de lien externe (utilisez le bon paquet d'icônes)
 import { projects } from "../constant/Data";
 import { FaExternalLinkAlt, FaSearchPlus, FaCode } from "react-icons/fa";
 export default function Project() {

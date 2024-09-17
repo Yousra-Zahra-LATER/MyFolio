@@ -16,13 +16,19 @@ import {
   
 } from "react-icons/si";
 import { DiDjango } from "react-icons/di";
-import { FaJava, FaPython, FaReact } from "react-icons/fa";
+import { FaBootstrap, FaJava, FaPython, FaReact } from "react-icons/fa";
 import { LuBrainCircuit } from "react-icons/lu";
+import { SiFlask } from "react-icons/si";
 export const ICONS = [
   {
     icon: SiProxmox ,
     label: "Proxmox",
     classes: "hover:-rotate-90 hover:text-[#DE6C00]",
+  },
+  {
+    icon: SiFlask ,
+    label: "Flask",
+    classes: "hover:translate-x-1 hover:text-[##000000]",
   },
   {
     icon: FaJava,
@@ -120,9 +126,9 @@ export const ICONS = [
 export const projects = [
   {
     id: 1,
-    title: "Content Based Image Retreival",
+    title: "Data Center Management",
     description:
-      "Technique permettant de rechercher des images à partir de ses caractéristiques visuelles, c'est-à-dire induite de leurs pixels. Les images sont classiquement décrites comme rendant compte de leur texture, couleur, forme.",
+      "An application for managing data center operations, including device tracking, IP address management, and virtualization... It streamlines infrastructure management and automates tasks to improve efficiency and visibility.",
     languages: [
       {
         icon: FaReact,
@@ -130,88 +136,156 @@ export const projects = [
         classe: "hover:text-[#FF6F61] dark:hover:text-[#61DAFB]",
       },
       {
-        icon: SiNodedotjs,
-        name: "Node.js",
-        classe: "hover:text-[#FF6F61] dark:hover:text-[#61DAFB]",
+        icon: DiDjango,
+        name: "Django",
+        classe: "hover:text-[#092D1F] dark:hover:text-[#092D1F] ",
       },
       {
-        icon: FaReact,
-        name: "React",
-        classe: "hover:text-[#61DAFB] dark:hover:text-[#61DAFB]",
+        icon: SiJavascript,
+        name: "JavaScript",
+        classe: "hover:text-[#F7DF1E] dark:hover:text-[#F7DF1E]",
       },
       {
-        icon: SiNodedotjs,
-        name: "Node.js",
-        classe: "hover:text-[#61DAFB] dark:hover:text-[#61DAFB]",
+        icon: SiHtml5,
+        name: "HTML5",
+        classe: "hover:text-[#E34F26] dark:hover:text-[#E34F26]",
       },
       {
-        icon: SiNodedotjs,
-        name: "Node.js",
-        classe: "hover:text-[#61DAFB] dark:hover:text-[#6777FB]",
+        icon: SiCss3,
+        name: "CSS3",
+        classe: "hover:text-[#254BDD] dark:hover:text-[#254BDD]",
+      },
+      
+    ],
+    imageUrl: "/src/assets/DC.png",
+    link: "lien_vers_votre_projet_1",
+  },
+  {
+    id: 2,
+    title: "Content-Based Radiographic Image Retrieval System",
+    description:
+      "This project focuses on developing a content-based radiographic image retrieval system using deep learning, specifically convolutional neural networks (CNNs), to find similar images. The system is integrated into a web application to facilitate model training, performance analysis, and image similarity searches, with additional interpretability features to highlight clinically relevant regions.",
+    languages: [
+      {
+        icon: SiBootstrap,
+        name: "Bootstrap",
+        classe: "hover:text-[#7952B3] dark:hover:text-[#7952B3]",
+      },
+      
+      {
+        icon: FaPython,
+        name:"Python",
+        classe: "hover:text-[#FFD43B] dark:hover:text-[#FFD43B]",
+      },
+      {
+        icon: SiFlask ,
+        name: "Flask",
+        classe: "hover:text-[#000000] dark:hover:text-[#000000]",
+      },
+      {
+        icon: SiJavascript,
+        name: "JavaScript",
+        classe: "hover:text-[#F7DF1E] dark:hover:text-[#F7DF1E]",
+      },
+      {
+        icon: SiHtml5,
+        name: "HTML5",
+        classe: "hover:text-[#E34F26] dark:hover:text-[#E34F26]",
+      },
+      {
+        icon: SiCss3,
+        name: "CSS3",
+        classe: "hover:text-[#254BDD] dark:hover:text-[#254BDD]",
       },
     ],
     imageUrl: "/src/assets/deepLearning.png",
     link: "lien_vers_votre_projet_1",
   },
   {
-    id: 2,
-    title: "Content Based Image Retreival",
+    id: 3,
+    title: "Intelligent application for student absence management",
     description:
-      "Technique permettant de rechercher des images à partir de ses caractéristiques visuelles, c'est-à-dire induite de leurs pixels. Les images sont classiquement décrites comme rendant compte de leur texture, couleur, forme.",
+      "This project aims to streamline the manual student absence management processes at the Faculty by developing and implementing a dynamic web application to automate the management of student absences.",
     languages: [
       {
-        icon: SiNodedotjs,
-        name: "Node.js",
-        classe: "hover:text-[#61DAFB] dark:hover:text-[#6777FB]",
+        icon: FaJava,
+        name: "JavaEE",
+        classe: "hover:text-[#007396] dark:hover:text-[#007396]",
+      },
+      {
+        icon: SiMysql,
+        name: "Mysql",
+        classe: "hover:text-[#015B84] dark:hover:text-[#015B84]",
+      },
+      {
+        icon: SiBootstrap,
+        name: "Bootstrap",
+        classe: "hover:text-[#7952B3] dark:hover:text-[#7952B3]",
+      },
+      {
+        icon: SiJavascript,
+        name: "JavaScript",
+        classe: "hover:text-[#F7DF1E] dark:hover:text-[#F7DF1E]",
+      },
+      {
+        icon: SiHtml5,
+        name: "HTML5",
+        classe: "hover:text-[#E34F26] dark:hover:text-[#E34F26]",
+      },
+      {
+        icon: SiCss3,
+        name: "CSS3",
+        classe: "hover:text-[#254BDD] dark:hover:text-[#254BDD]",
       },
     ],
-    imageUrl: "/src/assets/22.png",
+    imageUrl: "/src/assets/IA.png",
     link: "lien_vers_votre_projet_1",
   },
 ];
-export const ABOUT_TEXT = `I'm a edicated software engineer with a strong 
-focus on full-stack development and over a year of experience. I specialize 
-in creating beautiful, responsive, and user-friendly websites. Always seeking
- new challenges and opportunities to grow my skills, I invite you to explore 
- my portfolio to see my innovative projects and discover how my skills can add 
- value to your team.`;
+export const ABOUT_TEXT = `I'm a dedicated software engineer with a strong focus on full-stack development.
+ I specialize in creating beautiful, responsive, and user-friendly websites. 
+ Always seeking new challenges and opportunities to grow my skills,
+ I invite you to explore my portfolio to see my innovative projects 
+ and discover how my skills can add value to your team.`;
 
 export const experienceData = [
   {
-    role: "IT Operations Engineer",
+    role: "IT Operations Engineer ",
     period: "January, 2024 - PRESENT",
-    company: "Algeria Telecom",
+    company: "Data Center - Algeria Telecom",
     duties: [
-      "Developed web applications using JavaScript, React, Tailwind, and NextJS.",
-      "Created and developed websites, landing pages, and email templates using HubSpot CMS that are easy for clients to edit and optimized for different devices",
-      "Assisted in the maintenance and troubleshooting of client's websites to ensure smooth performance and user satisfaction.",
+      "Equipment Installation and Configuration.",
+      "Virtualization with Proxmox to maximize resource utilization through efficient management of virtual machines and containers.",
+      "Infrastructure Monitoring and Maintenance.",
+      "High Availability (HA) Management to ensure continuous service and minimal downtime.",
+      "Backup and Recovery Management to protect critical data and ensure business continuity.",
     ],
   },
   {
     role: "FULL STACK Developer",
-    period: "July, 2023 - PRESENT",
+    period: "--- - PRESENT",
     company: "FREELANCE",
     duties: [
-      "Developed and implemented CMS websites utilizing the HubSpot platform, resulting in an efficient and user-friendly experience for clients",
-      "Successfully resolved various technical issues for clients, contributing to a positive and productive project experience",
-      "Achieved the top-rated badge on Upwork within four months of starting as a freelancer, demonstrating exceptional performance and customer satisfaction in delivering high-quality front-end development services.",
+      "Front-End Development : Designing and developing user interfaces using technologies like HTML, CSS, JavaScript, and the modern framework React, along with libraries and frameworks such as Material UI, Tailwind CSS, and Bootstrap.",
+      "Back-End Development: Building and maintaining server-side logic, databases, and APIs using Python, with frameworks like Django or Flask.",
+      "Database Management: Managing SQL databases to ensure efficient data storage and retrieval.",
     ],
   },
 ];
 
 export const educationData = [
   {
-    degree: "Master Degree",
+    degree: "Master's Degree in computer science",
     period: "2020 - 2022",
-    field: "Software Engineer",
+    field: "Software Engineering",
     university: "Abdelhamid Mehri University - Constantine - Algeria",
     direction: "",
     bgColor: "bg-pink-100",
   },
   {
-    degree: "Licence Degree",
+    degree: "Bachelor's Degree in computer science",
     period: "2017 - 2020",
-    field: "Software Engineer",
+    field: "Software Engineering",
     university: "Abdelhamid Mehri University - Constantine - Algeria",
     direction: "reverse",
     bgColor: "bg-pink-200",

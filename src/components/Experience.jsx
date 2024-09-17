@@ -82,7 +82,7 @@ const Experience = () => {
 
             <TabsContent
               value="tab2"
-              className="lg:w-[65%] md:w-[75%] w-[95%] mx-auto md:mb-0 mb-5 "
+              className="lg:w-[70%] md:w-[75%] w-[95%] mx-auto md:mb-0 mb-5 "
             >
               <div className="relative text-gray-700 antialiased font-semibold">
                 <div className="hidden absolute w-1 sm:block bg-pink-900 h-full left-1/2 transform -translate-x-1/2"></div>

@@ -68,7 +68,7 @@ export default function Project() {
               </p>
               <div className="w-5/5 border-t-2 dark:opacity-5 border-pink-100 mb-5" />
               {/* Icônes utilisées */}
-              <div className="flex flex-wrap gap-5 mt-1 font-semibold">
+              <div className="flex flex-wrap gap-4 mt-1 font-semibold">
                 {project.languages.map(({ icon: Icon, name, classe }) => (
                   <div
                     key={name}

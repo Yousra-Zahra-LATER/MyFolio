@@ -47,11 +47,11 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
               <div className="self-start md:mb-1 text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white ">
                 Hello there, I am
               </div>
-              <h4 className="right-7 lg:right-8 lg:text-7xl md:text-6xl text-7xl font-bold whitespace-nowrap text-black relative dark:text-pink-100">
+              <h4 className="right-7 lg:right-4 lg:text-7xl md:text-6xl text-7xl font-bold whitespace-nowrap text-black relative dark:text-pink-100">
                 Zahra YL.
               </h4>
               <div className="self-end md:mt-1 text-primary-400 font-medium text-base dark:text-opacity-80 dark:text-white">
-                Full Stack Web Developer
+                Software Engineer
               </div>
             </motion.div>
             <LazyMotion features={domAnimation} strict>

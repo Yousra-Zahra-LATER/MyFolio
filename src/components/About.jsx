@@ -3,9 +3,9 @@ import { m, motion, LazyMotion, domAnimation } from "framer-motion";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FixedDiv from "../constant/FixedDiv";
-import githubIcon from "../assets/github.svg";
-import emailIcon from "../assets/email.svg";
-import linkedinIcon from "../assets/linkedin.svg";
+import githubIcon from "/github.svg";
+import emailIcon from "/email.svg";
+import linkedinIcon from "/linkedin.svg";
 import { Element, Link } from "react-scroll";
 import Button from "../constant/Button";
 import { ABOUT_TEXT } from "../constant/Data";
@@ -30,7 +30,7 @@ const socials = [
 
 const About = ({ isDarkMode, toggleDarkMode }) => {
   // Déterminer l'URL de l'image en fonction de isDarkMode
-  const imageUrl = isDarkMode ? "/src/assets/mee1.png" : "/src/assets/mee.png";
+  const imageUrl = isDarkMode ? "mee1.png" : "mee.png";
 
   return (
     <Element name="home" className=" bg-custom-about bg-center bg-cover">
@@ -162,7 +162,7 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
               className="md:w-[50%] flex justify-center md:mb-16"
             >
            
-             <img src={imageUrl} alt="Me" className="rounded-t-full" />
+             <img src={imageUrl} alt="Mess" className="rounded-t-full" />
             </m.div>
           </LazyMotion>
        </div> 

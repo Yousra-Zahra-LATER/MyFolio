@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'custom-about': "url('/src/assets/53.PNG')",
-        'custom-contact': "url('/src/assets/2.PNG')",
+        'custom-about': "url('53.PNG')",
+        'custom-contact': "url('2.PNG')",
       },
       fontFamily: {
         signature: ["Great Vibes"],

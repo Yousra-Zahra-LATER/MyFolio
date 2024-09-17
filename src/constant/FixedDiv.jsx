@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import githubIcon from "../assets/github.svg";
-import emailIcon from "../assets/email.svg";
-import linkedinIcon from "../assets/linkedin.svg";
+import githubIcon from "/github.svg";
+import emailIcon from "/email.svg";
+import linkedinIcon from "/linkedin.svg";
 
 // Définir les icônes des réseaux sociaux
 const socials = [

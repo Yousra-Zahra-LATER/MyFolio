@@ -157,7 +157,7 @@ export const projects = [
       },
       
     ],
-    imageUrl: "/src/assets/DC.png",
+    imageUrl: "DC.png",
     link: "lien_vers_votre_projet_1",
   },
   {
@@ -198,7 +198,7 @@ export const projects = [
         classe: "hover:text-[#254BDD] dark:hover:text-[#254BDD]",
       },
     ],
-    imageUrl: "/src/assets/deepLearning.png",
+    imageUrl: "deepLearning.png",
     link: "lien_vers_votre_projet_1",
   },
   {
@@ -238,7 +238,7 @@ export const projects = [
         classe: "hover:text-[#254BDD] dark:hover:text-[#254BDD]",
       },
     ],
-    imageUrl: "/src/assets/IA.png",
+    imageUrl: "IA.png",
     link: "lien_vers_votre_projet_1",
   },
 ];

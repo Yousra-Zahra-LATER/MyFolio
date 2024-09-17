@@ -6,7 +6,7 @@ import { SunIcon } from "@heroicons/react/24/solid";
 import { RiMoonClearFill } from "react-icons/ri";
 import { Link } from "react-scroll";
 import Button from "../constant/Button";
-import CV from "../assets/CV.pdf"; // Import the PDF file
+import CV from "/CV.pdf"; // Import the PDF file
  
 export const NavBar = ({ isDarkMode, toggleDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);

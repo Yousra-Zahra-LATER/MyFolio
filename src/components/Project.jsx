@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Element } from "react-scroll";
 import SectionTitle from "../constant/SectionTitle";
 import { projects } from "../constant/Data";
 import { FaExternalLinkAlt, FaSearchPlus, FaCode } from "react-icons/fa";
+
 export default function Project() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+
+  const openModal = (imageUrl) => {
+    setModalImage(imageUrl);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalImage("");
+  };
+
   return (
     <Element
       name="project"
@@ -20,37 +34,34 @@ export default function Project() {
             }`}
           >
             {/* Image du projet */}
-
             <div className="md:w-6/12 m-2 h-auto">
               <div
                 data-aos="fade-zoom-in"
                 data-aos-delay="50"
                 data-aos-duration="1000"
-                className="group max-w-full  relative z-[1]"
+                className="group max-w-full relative z-[1]"
               >
                 <figure>
                   <img
-                    className="object-cover rounded-xl "
+                    className="object-cover rounded-xl"
                     src={project.imageUrl}
                     alt={project.title}
                   />
                 </figure>
-                <div className="w-full h-full bg-red-400 rounded-xl bg-opacity-20 absolute top-0 left-0 z-[5] hidden group-hover:block">
+                <div className="w-full h-full bg-red-100 rounded-xl bg-opacity-20 absolute top-0 left-0 z-[5] hidden group-hover:block">
                   <div className="w-full h-full flex items-center gap-5 justify-center">
                     {/* Icône de zoom */}
                     <FaSearchPlus
-                      className="text-gray-900 hover:text-gray-500 cursor-pointer  "
-                      onClick={() => {
-                        // Action à effectuer pour agrandir l'image
-                        console.log("Zoom clicked");
-                      }}
+                      className="text-gray-900 hover:text-gray-500 cursor-pointer"
+                      onClick={() => openModal(project.imageUrl)}
                     />
                     {/* Icône de code */}
                     <FaCode
                       className="text-gray-900 hover:text-gray-500 cursor-pointer"
                       onClick={() => {
-                        // Action à effectuer pour afficher le code
-                        console.log("Code clicked");
+                        if (project.link) {
+                          window.open(project.link, "_blank");
+                        }
                       }}
                     />
                   </div>
@@ -63,7 +74,7 @@ export default function Project() {
               <h3 className="text-2xl font-semibold mb-5 dark:text-gray-300">
                 {project.title}
               </h3>
-              <p className="text-gray-600  leading-relaxed mb-5 dark:text-white ">
+              <p className="text-gray-600 leading-relaxed mb-5 dark:text-white">
                 {project.description}
               </p>
               <div className="w-5/5 border-t-2 dark:opacity-5 border-pink-100 mb-5" />
@@ -75,13 +86,32 @@ export default function Project() {
                     className={`flex items-center bg-pink-100 dark:bg-gray-800 px-2 py-1 rounded-md text-sm text-gray-700 dark:text-gray-300 ${classe}`}
                   >
                     <Icon className="text-2xl opacity-60" />
-                    <span className="ml-2 text-sm ">{name}</span>
+                    <span className="ml-2 text-sm">{name}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         ))}
+
+        {/* Modal pour agrandir l'image */}
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[1000]">
+            <div className="relative bg-white p-4 rounded-lg">
+              <button
+                className="absolute top-2 right-2 text-white bg-red-600 rounded-full p-2"
+                onClick={closeModal}
+              >
+                ×
+              </button>
+              <img
+                className="object-contain max-w-full max-h-screen"
+                src={modalImage}
+                alt="Zoomed"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </Element>
   );

@@ -33,7 +33,11 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
   const imageUrl = isDarkMode ? "mee1.png" : "mee.png";
 
   return (
-    <Element name="home" className=" bg-custom-about bg-center bg-cover">
+    <Element name="home"  style={{
+      backgroundImage: "url('53.png')", // Assurez-vous que le chemin est correct
+    
+    }}
+  className=" bg-center bg-cover">
       <div className="w-full flex justify-center min-h-screen dark:bg-gradient-to-b from-gray-900 to-gray-700 py-1">
       <div className="md:w-[86%] w-11/12 flex md:flex-row gap-5 items-center flex-col-reverse ">
       <div className="md:w-[50%] flex flex-col lg:gap-7 md:gap-3.5 gap-6 ">
@@ -55,19 +59,6 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
               </div>
             </motion.div>
             <LazyMotion features={domAnimation} strict>
-              <m.p
-                className="text-center font-bold mt-3 text-black dark:text-pink-300 "
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{
-                  duration: 0.5,
-                  type: "spring",
-                  stiffness: 30,
-                  damping: 30,
-                }}
-              >
-                I'm so happy you are here :)
-              </m.p>
               <m.p
                 className="text-center text-gray-700 dark:text-white font-semibold"
                 initial={{ opacity: 0 }}

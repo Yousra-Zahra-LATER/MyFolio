@@ -158,7 +158,7 @@ export const projects = [
       
     ],
     imageUrl: "DC.png",
-    link: "lien_vers_votre_projet_1",
+    link: "https://github.com/Yousra-Zahra-LATER/DC_Hosting",
   },
   {
     id: 2,
@@ -199,7 +199,7 @@ export const projects = [
       },
     ],
     imageUrl: "deepLearning.png",
-    link: "lien_vers_votre_projet_1",
+    link: "https://github.com/Yousra-Zahra-LATER/FYP-Xray-CBIR-and-Interpretability-of-Deep-Learning-Results",
   },
   {
     id: 3,
@@ -239,14 +239,16 @@ export const projects = [
       },
     ],
     imageUrl: "IA.png",
-    link: "lien_vers_votre_projet_1",
+    link: "https://github.com/Yousra-Zahra-LATER/MyFolio",
   },
 ];
-export const ABOUT_TEXT = `I'm a dedicated software engineer with a strong focus on full-stack development.
- I specialize in creating beautiful, responsive, and user-friendly websites. 
- Always seeking new challenges and opportunities to grow my skills,
- I invite you to explore my portfolio to see my innovative projects 
- and discover how my skills can add value to your team.`;
+export const ABOUT_TEXT = `I am a dedicated software engineer with a strong 
+focus on full-stack web development, specializing in creating dynamic and 
+responsive applications using React and Django. With a passion for delivering 
+efficient and user-friendly solutions, I am constantly seeking to enhance my 
+skills and build innovative web applications. Explore my portfolio to discover
+ my expertise in combining front-end and back-end technologies to create 
+ seamless digital experiences.`;
 
 export const experienceData = [
   {

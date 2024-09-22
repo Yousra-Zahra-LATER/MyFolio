@@ -41,7 +41,7 @@ const Experience = () => {
             <TabsList className="lg:w-[40%] md:w-[55%] w-[80%] mx-auto flex gap-3 justify-center h-14 bg-purple-100 dark:bg-purple-200 rounded-md p-2">
               <TabsTrigger
                 value="tab1"
-                className={`rounded my-1  w-[35%] flex items-center justify-center text-center ${
+                className={`rounded my-1  w-[50%] flex items-center justify-center text-center ${
                   activeTab === "tab1" ? "bg-pink-900 text-white" : "text-black"
                 }`}
                 onClick={() => handleTabChange("tab1")}
@@ -51,7 +51,7 @@ const Experience = () => {
               </TabsTrigger>
               <TabsTrigger
                 value="tab2"
-                className={`rounded my-1  w-[35%] flex items-center justify-center text-center ${
+                className={`rounded my-1  w-[50%] flex items-center justify-center text-center ${
                   activeTab === "tab2" ? "bg-pink-900 text-white" : "text-black"
                 }`}
                 onClick={() => handleTabChange("tab2")}

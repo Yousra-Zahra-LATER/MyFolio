@@ -83,7 +83,7 @@ const About = ({ isDarkMode, toggleDarkMode }) => {
                   damping: 30,
                 }}
               >
-                Let's connect and create exceptional web experiences together.
+                Let's connect and create exceptional web experiences together :)
               </m.p>
               <div className="flex flex-row justify-center items-center w-full gap-3 md:hidden ">
                 <ul className="flex flex-row justify-center items-center w-full gap-3 md:flex-col ">

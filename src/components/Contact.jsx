@@ -6,8 +6,11 @@ import Button from "../constant/Button";
 export default function Contact() {
   return (
     <Element
-    name="contact"
-    className=" bg-custom-contact bg-center bg-cover">
+    name="contact" style={{
+      backgroundImage: "url('2.png')", // Assurez-vous que le chemin est correct
+    
+    }}
+    className=" bg-center bg-cover">
     <div className="dark:bg-gray-700 w-full flex justify-center min-h-screen dark:bg-gradient-to-b from-gray-700 to-gray-900 py-5">
       <div className="md:w-[86%] w-11/12  sm:h-max  flex flex-col gap-6">
         <SectionTitle title="CONTACT ME" subtitle="GET IN TOUCH" />

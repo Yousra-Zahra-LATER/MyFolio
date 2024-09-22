@@ -7,10 +7,7 @@ export default {
   darkMode: 'class', // Ajout du mode sombre ici
   theme: {
     extend: {
-      backgroundImage: {
-        'custom-about': "url('53.PNG')",
-        'custom-contact': "url('2.PNG')",
-      },
+    
       fontFamily: {
         signature: ["Great Vibes"],
         default: ["Poppins", "sans-serif"],

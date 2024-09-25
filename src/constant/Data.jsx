@@ -124,7 +124,7 @@ export const ICONS = [
 ];
 
 export const projects = [
-  {
+  /*{
     id: 1,
     title: "Data Center Management",
     description:
@@ -159,9 +159,9 @@ export const projects = [
     ],
     imageUrl: "DC.png",
     link: "https://github.com/Yousra-Zahra-LATER/DC_Hosting",
-  },
+  },*/
   {
-    id: 2,
+    id: 1,
     title: "Content-Based Radiographic Image Retrieval System",
     description:
       "This project focuses on developing a content-based radiographic image retrieval system using deep learning, specifically convolutional neural networks (CNNs), to find similar images. The system is integrated into a web application to facilitate model training, performance analysis, and image similarity searches, with additional interpretability features to highlight clinically relevant regions.",
@@ -202,7 +202,7 @@ export const projects = [
     link: "https://github.com/Yousra-Zahra-LATER/FYP-Xray-CBIR-and-Interpretability-of-Deep-Learning-Results",
   },
   {
-    id: 3,
+    id: 2,
     title: "Intelligent application for student absence management",
     description:
       "This project aims to streamline the manual student absence management processes at the Faculty by developing and implementing a dynamic web application to automate the management of student absences.",

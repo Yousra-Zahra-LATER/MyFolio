@@ -124,7 +124,7 @@ export const ICONS = [
 ];
 
 export const projects = [
-  /*{
+  {
     id: 1,
     title: "Data Center Management",
     description:
@@ -159,7 +159,7 @@ export const projects = [
     ],
     imageUrl: "DC.png",
     link: "https://github.com/Yousra-Zahra-LATER/DC_Hosting",
-  },*/
+  },
   {
     id: 1,
     title: "Content-Based Radiographic Image Retrieval System",
